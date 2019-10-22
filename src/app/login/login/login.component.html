@@ -1,0 +1,14 @@
+<section>
+  <form [formGroup]="loginForm" (submit)="submitForm()">
+    <input formControlName="user" [ngClass]="{ error: user.dirty && user.errors }" />
+    <span *ngIf="user.errors && user.errors.user">Ingrese un user válido</span>
+    <input type="password" name="password" />
+    <input
+      type="password"
+      formControlName="password"
+      [ngClass]="{ error: password.dirty && password.errors }"
+    />
+    <span *ngIf="password.errors && password.required">Introduzca su contraseña</span>
+    <button type="submit" [disabled]="loginForm.invalid">Enviar</button>
+  </form>
+</section>
