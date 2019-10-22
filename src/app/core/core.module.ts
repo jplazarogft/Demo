@@ -7,8 +7,9 @@ import { FooterComponent } from './footer/footer.component';
 
 // Services
 import { AuthenticationService } from './authentication/authentication.service';
+import { UserService } from './services/user.service';
 
-const providers = [AuthenticationService];
+const providers = [AuthenticationService, UserService];
 const declarations = [HeaderComponent, FooterComponent];
 
 @NgModule({

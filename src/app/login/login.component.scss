@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+
+.login {
+  @include wrapper;
+  display: flex;
+  justify-content: center;
+
+  form {
+    background: #dedede;
+    width: em(400);
+  }
+}
