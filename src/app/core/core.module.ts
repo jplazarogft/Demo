@@ -16,5 +16,6 @@ const declarations = [HeaderComponent, FooterComponent];
   declarations,
   imports: [CommonModule],
   providers,
+  exports: [HeaderComponent, FooterComponent],
 })
 export class CoreModule {}

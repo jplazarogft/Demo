@@ -2,11 +2,9 @@
 @import 'mixins';
 
 .login {
-  @include wrapper;
-  display: flex;
-  justify-content: center;
-
   form {
+    display: flex;
+    flex-direction: column;
     background: #dedede;
     width: em(400);
   }
