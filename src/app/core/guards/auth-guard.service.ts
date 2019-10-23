@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuardService {
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
-  canActivate(): Observable<boolean> {
-    return this.userService.isAuthenticated();
+  canActivate(): boolean {
+    if (!this.userService.isAuthenticated) {
+      this.router.navigate(['login']);
+      return false;
+    }
+    return true;
   }
 }

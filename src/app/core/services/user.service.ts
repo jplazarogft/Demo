@@ -8,11 +8,7 @@ export class UserService {
   constructor() {}
 
   // todo -> change when services are done!
-  isAuthenticated = (): Observable<boolean> => {
-    return new Observable(observer => {
-      setTimeout(() => {
-        observer.next(true);
-      });
-    });
-  };
+  get isAuthenticated(): boolean {
+    return false;
+  }
 }
