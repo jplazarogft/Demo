@@ -1,14 +1,88 @@
 @import 'variables';
+@import 'fonts';
 @import 'mixins';
 
 .login {
   background: $white;
-  padding: em(15) em(25);
-  height: 90%;
+  display: flex;
+  height: em(788);
+  margin-bottom: em(40);
+  padding-left: em(25);
   width: 100%;
+
+  h1 {
+    color: $secondary;
+    font-size: em(48);
+  }
+
+  h3 {
+    color: $blue;
+    font-size: em(21);
+  }
+
+  h4 {
+    color: $grey-dark;
+    font-size: em(26);
+    line-height: em(44, 26);
+    margin-bottom: em(10, 26);
+  }
+
   form {
     display: flex;
     flex-direction: column;
+    font-family: $open-sans;
+    margin-bottom: em(23);
     width: em(400);
+    input {
+      font-size: em(24);
+      height: em(40, 24);
+      margin-bottom: em(23, 24);
+      padding: 0 em(10, 24);
+      width: em(321, 24);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    height: em(113);
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(111, 119, 121, 0.2);
+    margin-bottom: em(42);
+    padding-bottom: em(15);
+
+    &--panel {
+      background-color: rgba(203, 205, 205, 0.66);
+    }
+  }
+
+  &__forgot-password {
+    font-size: 16;
+    color: $main;
+  }
+
+  &__no-account {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: em(33);
+    padding-right: em(122);
+
+    p {
+      color: $grey-dark;
+      display: inline-block;
+      font-size: em(20);
+      line-height: em(32, 20);
+    }
+  }
+
+  &__left {
+    width: 58%;
+  }
+
+  &__right {
+    background-image: url('/assets/images/login_background.png');
+    height: 100%;
+    width: 42%;
   }
 }

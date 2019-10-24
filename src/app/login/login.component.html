@@ -1,7 +1,24 @@
 <section class="login">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input formControlName="user" type="text" />
-    <input formControlName="password" type="password" />
-    <button type="submit">Submit</button>
-  </form>
+  <div class="login__left">
+    <div class="login__header">
+      <h3>Welcome to the</h3>
+      <h1>Globile Hub</h1>
+    </div>
+    <div class="login__no-account">
+      <p>Don't have an account?</p>
+      <button type="button" class="btn btn--small">
+        Get Started
+      </button>
+    </div>
+    <h4>Sign in to</h4>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input formControlName="user" type="text" placeholder="username" />
+      <input formControlName="password" type="password" placeholder="password" />
+      <button type="submit">LOG IN</button>
+    </form>
+    <a href="" class="login__forgot-password">forgot your password</a>
+  </div>
+  <div class="login__right">
+    <div class="login__header login__header--panel"></div>
+  </div>
 </section>
