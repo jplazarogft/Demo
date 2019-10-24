@@ -2,10 +2,13 @@
 @import 'mixins';
 
 .login {
+  background: $white;
+  padding: em(15) em(25);
+  height: 90%;
+  width: 100%;
   form {
     display: flex;
     flex-direction: column;
-    background: #dedede;
     width: em(400);
   }
 }

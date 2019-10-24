@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   height: 100%;
@@ -5,9 +8,10 @@ body {
   background: $grey;
 }
 .wrapper {
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
-  max-width: em($body-width);
   padding-right: em(10);
   padding-left: em(10);
+  width: em($body-width);
 }
