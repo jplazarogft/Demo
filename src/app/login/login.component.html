@@ -12,13 +12,20 @@
     </div>
     <h4>Sign in to</h4>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <input formControlName="user" type="text" placeholder="username" />
-      <input formControlName="password" type="password" placeholder="password" />
-      <button type="submit">LOG IN</button>
+      <div class="form-input">
+        <input formControlName="user" type="text" placeholder="username" [ngClass]="{'error': user.dirty && !user.valid}" />
+        <span *ngIf="user.dirty && !user.valid">Field required</span>
+      </div>
+      <div class="form-input">
+        <input formControlName="password" type="password" placeholder="password" [ngClass]="{'error': password.dirty && !password.valid}" />
+        <span *ngIf="password.dirty && !password.valid">Field required</span>
+      </div>
+      <button type="submit" class="btn btn--red" [disabled]="!form.valid">LOG IN</button>
     </form>
     <a href="" class="login__forgot-password">forgot your password</a>
   </div>
   <div class="login__right">
     <div class="login__header login__header--panel"></div>
+    <a href="" class="login__trip">Small trip</a>
   </div>
 </section>
