@@ -6,6 +6,7 @@ button,
   background-color: transparent;
   border: 1px solid $main;
   border-radius: 100px;
+  font-family: $santander-hl-regular;
   color: $main;
   cursor: pointer;
   font-size: em(24);
@@ -19,9 +20,14 @@ button,
     width: em(140, 16);
   }
 
-  &:disabled {
+  &--red {
     background-color: $main;
-    border-color: $main;
-    color: white;
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $grey-disabled;
+    border-color: $grey-disabled-border;
   }
 }

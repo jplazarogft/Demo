@@ -12,16 +12,19 @@
 
   h1 {
     color: $secondary;
+    font-family: $santander-hl-regular;
     font-size: em(48);
   }
 
   h3 {
     color: $blue;
+    font-family: $santander-hl-bold;
     font-size: em(21);
   }
 
   h4 {
     color: $grey-dark;
+    font-family: $santander-hl-regular;
     font-size: em(26);
     line-height: em(44, 26);
     margin-bottom: em(10, 26);
@@ -32,13 +35,22 @@
     flex-direction: column;
     font-family: $open-sans;
     margin-bottom: em(23);
-    width: em(400);
+    width: 100%;
+
+    button {
+      font-family: $santander-hl-bold;
+    }
+
     input {
       font-size: em(24);
       height: em(40, 24);
       margin-bottom: em(23, 24);
       padding: 0 em(10, 24);
       width: em(321, 24);
+      & + span {
+        color: $main;
+        margin-left: em(10);
+      }
     }
   }
 
@@ -71,6 +83,7 @@
     p {
       color: $grey-dark;
       display: inline-block;
+      font-family: $santander-hl-regular;
       font-size: em(20);
       line-height: em(32, 20);
     }
@@ -81,8 +94,34 @@
   }
 
   &__right {
-    background-image: url('/assets/images/login_background.png');
+    background: url('/assets/images/login_background.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 42%;
+  }
+
+  &__trip {
+    color: $main;
+    font-family: $santander-hl-regular;
+    line-height: em(20);
+    margin-bottom: em(62);
+    margin-top: auto;
+    padding-left: em(23);
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      border-top: em(10) solid transparent;
+      border-bottom: em(10) solid transparent;
+      border-left: em(15) solid $main;
+      height: 0px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 0px;
+    }
   }
 }
