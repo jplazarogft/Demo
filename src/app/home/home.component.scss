@@ -2,6 +2,12 @@
 @import 'mixins';
 
 .main {
+  border-left: 1px solid $grey-border;
+  border-right: 1px solid $grey-border;
+  border-bottom: 1px solid $grey-border;
   background-color: $white;
-  padding: em(28) em(30);
+
+  &__container {
+    padding: em(28) em(30);
+  }
 }
