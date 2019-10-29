@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'mixins';
+
+button,
+.btn {
+  background-color: transparent;
+  border: 1px solid $main;
+  border-radius: 100px;
+  font-family: $santander-hl-regular;
+  color: $main;
+  cursor: pointer;
+  font-size: em(24);
+  height: em(49, 24);
+  width: em(200, 24);
+
+  &--small {
+    border-radius: em(20, 16);
+    font-size: em(16);
+    height: em(35, 16);
+    width: em(140, 16);
+  }
+
+  &--red {
+    background-color: $main;
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $grey-disabled;
+    border-color: $grey-disabled-border;
+  }
+}

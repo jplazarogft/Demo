@@ -1,10 +1,18 @@
 @import 'variables';
 @import 'mixins';
 header {
-  background: $black;
-  display: block;
-  height: em(60);
-  margin-bottom: em(30);
+  align-items: center;
+  background-image: url('/assets/images/header.png');
+  border-bottom: 1px solid $main;
+  display: flex;
+  height: em(112);
+  object-fit: contain;
+  padding: 0 em(40);
+
+  img {
+    height: em(38);
+    width: em(295);
+  }
 
   nav {
     align-items: center;

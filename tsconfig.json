@@ -12,7 +12,14 @@
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@mocks/*": ["src/app/core/mocks/*"],
+      "@sharedModels/*": ["src/app/shared/models/*"],
+      "@sharedServices/*": ["src/app/shared/services/*"],
+      "@coreModels/*": ["src/app/core/models/*"],
+      "@coreServices/*": ["src/app/core/services/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

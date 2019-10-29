@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { footerMenu } from '@mocks/menu';
+import { NavMenuOption } from '@sharedModels/nav-menu-option';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  footerMenu: NavMenuOption[] = footerMenu;
 }

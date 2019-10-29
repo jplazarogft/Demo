@@ -1,12 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; // must be imported as the last module as it contains the fallback route
+
 import { AppComponent } from './app.component';
+
+import { CoreModule } from './core/core.module';
+import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
+import { SharedModule } from './shared/shared.module';
+
+// Modules
+const imports = [
+  BrowserModule,
+  CoreModule,
+  SharedModule,
+  HomeModule,
+  LoginModule,
+  AppRoutingModule,
+];
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports,
   providers: [],
   bootstrap: [AppComponent],
 })

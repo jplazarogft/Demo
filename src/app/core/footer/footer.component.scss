@@ -1,12 +1,27 @@
 @import 'variables';
 @import 'mixins';
+@import 'fonts';
 
 :host {
   margin-top: auto;
 }
 
 footer {
-  display: block;
-  height: em(80);
-  background: $grey;
+  align-items: center;
+  background-color: $blue-dark;
+  display: flex;
+  height: em(70);
+  padding: 0 em(40);
+
+  p {
+    color: $white;
+    font-family: $open-sans;
+    font-size: em(12);
+  }
+}
+
+::ng-deep {
+  app-nav-menu {
+    margin-left: auto;
+  }
 }

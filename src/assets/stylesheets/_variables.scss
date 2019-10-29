@@ -1,7 +1,7 @@
 // Breakpoints
 $phone: '599px';
 $table: '600px';
-$body-width: 960;
+$body-width: 1280;
 $tablet-landscape: '900px';
 $desktop: '1200px';
 $desktop-big: '1800px';
@@ -12,7 +12,13 @@ $verdana: 'Verdana', sans serif;
 
 // Colors
 $black: #000;
-$grey: #e3e7f1;
+$blue: #24446c;
+$blue-light: #3366ff;
+$blue-dark: #1d252d;
+$grey: #dcdde0;
+$grey-dark: #6f7779;
+$grey-disabled: #949494;
+$grey-disabled-border: #6b6b6b;
 $white: #fff;
-$main: #3369ff;
-$secondary: #efe9cc;
+$main: #ec0000;
+$secondary: #3b5787;
