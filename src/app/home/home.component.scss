@@ -1,0 +1,7 @@
+@import 'variables';
+@import 'mixins';
+
+.main {
+  background-color: $white;
+  padding: em(28) em(30);
+}

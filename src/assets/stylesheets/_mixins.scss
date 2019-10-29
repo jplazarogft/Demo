@@ -28,6 +28,10 @@
   @return #{$pixels/$context}em;
 }
 
+@mixin box-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
 @mixin wrapper {
   margin-right: auto;
   margin-left: auto;

@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+:host {
+  margin-left: auto;
+}
+
+input {
+  @include box-shadow;
+  border: none;
+  height: em(36);
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-left: em(50);
+  width: em(530);
+
+  &::before {
+    content: '';
+  }
+}

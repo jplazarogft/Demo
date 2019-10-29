@@ -1,34 +1,58 @@
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
-nav {
-  ul {
-    display: flex;
-    li {
-      &:not(:last-child) {
+section {
+  @include box-shadow;
+  align-items: center;
+  background-color: $blue-background-menu;
+  display: flex;
+  font-family: $open-sans;
+  font-size: 16px;
+  height: em(50);
+  padding: 0 em(8) 0 em(30);
+
+  nav {
+    display: inline-flex;
+    height: 100%;
+    ul {
+      align-items: center;
+      display: flex;
+      height: 100%;
+
+      li {
+        height: 100%;
+
         a {
-          &:after {
-            content: '';
-            background: #fff;
-            display: inline-block;
-            position: absolute;
-            height: 100%;
-            right: 0;
-            top: 0;
-            width: 1px;
+          align-content: center;
+          color: $grey-menu-link;
+          display: inline-flex;
+          flex-wrap: wrap;
+          height: 100%;
+          padding: 0 em(10);
+          position: relative;
+
+          &.active {
+            color: $main;
+
+            &::after {
+              background-color: $main;
+              bottom: 0;
+              content: '';
+              height: em(4);
+              left: 0;
+              position: absolute;
+              width: 100%;
+            }
           }
         }
       }
-      a {
-        align-items: center;
-        color: $white;
-        display: flex;
-        font-family: $open-sans-light;
-        font-size: em(12);
-        height: 100%;
-        padding: 0 em(11) 0 em(10);
-        position: relative;
-        text-decoration: none;
+    }
+  }
+
+  ::ng-deep {
+    app-search-input {
+      input {
+        font-size: 16px;
       }
     }
   }

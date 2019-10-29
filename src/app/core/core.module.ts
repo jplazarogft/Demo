@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 // Components
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
 
 // Services
 import { UserService } from './services/user.service';
@@ -12,7 +13,7 @@ import { UserService } from './services/user.service';
 import { SharedModule } from '../shared/shared.module';
 
 const providers = [UserService];
-const declarations = [HeaderComponent, FooterComponent];
+const declarations = [HeaderComponent, FooterComponent, FooterMenuComponent];
 const imports = [CommonModule, SharedModule];
 
 @NgModule({
