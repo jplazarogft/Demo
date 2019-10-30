@@ -39,6 +39,14 @@
     color: $grey-icons;
   }
   &__body {
-    padding: em(20) em(20);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+
+    &--expanded {
+      max-height: em(800);
+      padding: em(20) em(20);
+      transition: max-height 0.15s ease-in;
+    }
   }
 }

@@ -8,5 +8,7 @@
       <button type="button" class="accordion__sel"><i class="icon-th-large"></i></button>
     </section>
   </section>
-  <section class="accordion__body"></section>
+  <section class="accordion__body" [ngClass]="{ 'accordion__body--expanded': expanded }">
+    <ng-content></ng-content>
+  </section>
 </section>
