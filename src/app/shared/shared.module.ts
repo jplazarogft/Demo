@@ -8,6 +8,6 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 @NgModule({
   declarations: [HeadingComponent, NavMenuComponent, SearchInputComponent, AccordionComponent],
   imports: [CommonModule],
-  exports: [HeadingComponent, NavMenuComponent, SearchInputComponent],
+  exports: [AccordionComponent, HeadingComponent, NavMenuComponent, SearchInputComponent],
 })
 export class SharedModule {}
