@@ -7,7 +7,7 @@ import { NavMenuOption } from '@sharedModels/nav-menu-option';
   styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent implements OnInit {
-  @Input() menu?: NavMenuOption[];
+  @Input() menu?: NavMenuOption[] = [];
   @Output() menuLinkClicked = new EventEmitter<string>();
 
   constructor() {}
