@@ -48,5 +48,10 @@
       padding: em(20) em(20);
       transition: max-height 0.15s ease-in;
     }
+
+    main {
+      max-width: 100%;
+      overflow: auto;
+    }
   }
 }
