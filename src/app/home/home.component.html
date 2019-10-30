@@ -1,5 +1,8 @@
 <section class="main">
-  <app-nav-menu [menu]="headerMenu" (menuLinkClicked)="updateActiveMenuLink($event)"></app-nav-menu>
+  <app-home-menu
+    [menu]="headerMenu"
+    (menuLinkClicked)="updateActiveMenuLink($event)"
+  ></app-home-menu>
   <section class="main__container">
     <app-heading></app-heading>
     <app-accordion></app-accordion>
