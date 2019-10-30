@@ -30,4 +30,8 @@ button,
     background-color: $grey-disabled;
     border-color: $grey-disabled-border;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
