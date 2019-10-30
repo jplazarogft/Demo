@@ -84,7 +84,6 @@
     .action-menu {
       @include box-shadow;
       align-items: center;
-      border: 1px solid $grey-border;
       display: flex;
       height: em(50);
 
@@ -123,7 +122,7 @@
       }
 
       &__hamburguer {
-        border: 1px solid $grey-border;
+        border-left: 1px solid $grey-border;
         height: em(50);
         width: em(47);
 
