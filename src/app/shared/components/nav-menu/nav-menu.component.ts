@@ -1,5 +1,5 @@
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
-import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,7 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
   @Input() menu?: NavMenuOption[];
+  @Output() menuLinkClicked = new EventEmitter<string>();
+
   constructor() {}
 
   ngOnInit() {}
+
+  updateActive = (event, activeLabel: string) => {
+    event.preventDefault();
+    this.menuLinkClicked.emit(activeLabel);
+  };
 }

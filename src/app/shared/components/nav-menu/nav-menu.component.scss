@@ -33,6 +33,7 @@ section {
 
           &.active {
             color: $main;
+            cursor: default;
 
             &::after {
               background-color: $main;
@@ -42,6 +43,12 @@ section {
               left: 0;
               position: absolute;
               width: 100%;
+            }
+          }
+
+          &:hover {
+            &:not(.active) {
+              color: rgba($color: $main, $alpha: 0.5);
             }
           }
         }

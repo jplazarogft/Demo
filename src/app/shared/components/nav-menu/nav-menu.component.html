@@ -1,11 +1,13 @@
 <section>
   <nav>
     <ul>
-      <li>
-        <a href="#" [ngClass]="{ active: true }">My Projects</a>
-      </li>
-      <li>
-        <a href="#" [ngClass]="{ active: false }">Catalogue</a>
+      <li *ngFor="let menuOption of menu">
+        <a
+          href="{{ menuOption.link }}"
+          [ngClass]="{ active: menuOption.active }"
+          (click)="updateActive($event, menuOption.label)"
+          >{{ menuOption.label }}</a
+        >
       </li>
     </ul>
   </nav>
