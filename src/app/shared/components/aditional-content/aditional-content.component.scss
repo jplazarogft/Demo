@@ -38,8 +38,9 @@ $grey-font: #7b8284;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: em(83);
     margin-bottom: em(20);
-    min-height: em(83);
+    overflow: hidden;
 
     a {
       color: $grey-font;
