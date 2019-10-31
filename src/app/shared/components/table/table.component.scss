@@ -2,6 +2,8 @@
 @import 'mixins';
 @import 'fonts';
 
+$blue-link: #11546f;
+$alternate-btn: #576c81;
 table {
   display: grid;
   border-collapse: collapse;
@@ -85,8 +87,12 @@ td {
   padding-bottom: 10px;
 
   a {
-    color: #11546f;
+    color: $blue-link;
     text-decoration: underline;
+
+    &:hover {
+      color: darken($color: $blue-link, $amount: 30%);
+    }
   }
 
   button {
@@ -94,14 +100,21 @@ td {
     border-radius: 2px;
     color: $white;
     height: em(27);
-    padding: em(0) em(20);
+    padding: em(0) em(15);
 
     &.row {
       &--edit {
         background-color: $main;
+        &:hover {
+          background-color: darken($color: $main, $amount: 4%);
+        }
       }
       &--view {
-        background-color: #576c81;
+        background-color: $alternate-btn;
+
+        &:hover {
+          background-color: darken($color: $alternate-btn, $amount: 5%);
+        }
       }
     }
 
