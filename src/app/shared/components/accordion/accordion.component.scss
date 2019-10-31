@@ -13,27 +13,32 @@
     height: em(50);
     background-color: $grey-light;
   }
+
   &__title {
     align-items: center;
     display: flex;
     height: 100%;
     padding: em(13) em(20);
+
     h3 {
       color: $main;
       font-family: $open-sans-light;
       font-size: 18px;
     }
   }
+
   &__actions {
     display: flex;
     height: 100%;
     margin-left: auto;
+
     button {
       background-color: transparent;
       border: none;
       border-radius: 0;
       height: 100%;
       width: em(50);
+
       &.accordion__sel {
         background: $white;
         color: $grey-icons;
