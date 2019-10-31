@@ -5,6 +5,7 @@
 .accordion {
   @include box-shadow;
   background-color: $white;
+  margin-bottom: em(45);
 
   &__header {
     align-items: center;
@@ -28,16 +29,18 @@
     height: 100%;
     margin-left: auto;
     button {
+      background-color: transparent;
       border: none;
       border-radius: 0;
       height: 100%;
       width: em(50);
+      &.accordion__sel {
+        background: $white;
+        color: $grey-icons;
+      }
     }
   }
-  &__sel {
-    background: $white;
-    color: $grey-icons;
-  }
+
   &__body {
     overflow: hidden;
     max-height: 0;
