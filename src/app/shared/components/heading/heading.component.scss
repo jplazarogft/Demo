@@ -6,6 +6,10 @@
   display: flex;
   margin-bottom: em(70);
 
+  button {
+    border-radius: 0;
+  }
+
   &__title-wrapper {
     align-items: center;
     display: flex;
@@ -22,6 +26,7 @@
       font-family: $open-sans-light;
       margin-right: em(10);
     }
+
     span {
       align-items: center;
       color: rgba($grey-menu-link, 0.7);
@@ -44,21 +49,25 @@
           top: em(2, 14);
           width: em(20, 14);
         }
+
         &--atom {
           &::before {
             background-image: url('/assets/images/icons/tag-atom.svg');
           }
         }
+
         &--inbox {
           &::before {
             background-image: url('/assets/images/icons/tag-inbox.svg');
           }
         }
+
         &--microsoft {
           &::before {
             background-image: url('/assets/images/icons/tag-microsoft.svg');
           }
         }
+
         &--watch {
           &::before {
             background-image: url('/assets/images/icons/tag-watch.svg');
@@ -74,6 +83,7 @@
 
   &__actions {
     margin-left: auto;
+
     button {
       border: none;
       height: em(22);
@@ -111,7 +121,7 @@
             &::after {
               content: '';
               height: 100%;
-              background-color: $grey-border;
+              background-color: $grey-light;
               position: absolute;
               right: 0;
               top: 0;
@@ -122,7 +132,7 @@
       }
 
       &__hamburguer {
-        border-left: 1px solid $grey-border;
+        border-left: 1px solid $grey-light;
         height: em(50);
         width: em(47);
 
@@ -132,6 +142,11 @@
           padding: em(13) em(10);
           position: relative;
           width: 100%;
+
+          &:hover {
+            background-color: $hover;
+          }
+
           img {
             width: 100%;
           }
