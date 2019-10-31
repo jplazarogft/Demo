@@ -1,6 +1,8 @@
-import { NavMenuOption } from '@sharedModels/nav-menu-option';
 import { Component, OnInit } from '@angular/core';
+import { AditionalContentSection } from '@sharedModels/aditional-content-section';
+import { NavMenuOption } from '@sharedModels/nav-menu-option';
 import { headerMenu } from '@mocks/menu';
+import { sections } from '@mocks/sections';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +11,7 @@ import { headerMenu } from '@mocks/menu';
 })
 export class HomeComponent implements OnInit {
   headerMenu: NavMenuOption[] = headerMenu;
+  sections: AditionalContentSection[] = sections;
 
   constructor() {}
 
