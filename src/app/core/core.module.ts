@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Components
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { FooterMenuComponent } from './footer/footer-menu/footer-menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FooterMenuComponent } from './components/footer/footer-menu/footer-menu.component';
 
 // Services
 import { UserService } from './services/user.service';
