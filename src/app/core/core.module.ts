@@ -11,9 +11,10 @@ import { UserService } from './services/user.service';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
+import { UserFeedComponent } from './components/user-feed/user-feed.component';
 
 const providers = [UserService];
-const declarations = [HeaderComponent, FooterComponent, FooterMenuComponent];
+const declarations = [HeaderComponent, FooterComponent, FooterMenuComponent, UserFeedComponent];
 const imports = [CommonModule, SharedModule];
 
 @NgModule({
