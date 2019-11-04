@@ -35,9 +35,10 @@
 @mixin wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: em($body-width);
-  padding-right: em(10);
-  padding-left: em(10);
+  width: em(1200);
+  @include for-big-desktop-up() {
+    width: em($body-width);
+  }
 }
 
 @mixin icon-style {
