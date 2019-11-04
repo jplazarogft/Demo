@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Node Package Manager(npm) is required in order to execute this project.
 
-[Node](https://nodejs.org/es/download/).
+[Download Node](https://nodejs.org/es/download/).
 
 ## Installing dependencies
 
