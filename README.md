@@ -1,7 +1,9 @@
 # Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+
 Node Package Manager(npm) is required in order to execute this project.
+
 [Node](https://nodejs.org/es/download/).
 
 ## Installing dependencies
