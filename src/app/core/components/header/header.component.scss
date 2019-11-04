@@ -7,7 +7,6 @@ header {
   display: flex;
   height: em(112);
   object-fit: contain;
-  padding: 0 em(40);
 
   img {
     height: em(38);
@@ -34,6 +33,21 @@ header {
       &.active {
         background: $main;
       }
+    }
+  }
+
+  .header__wrapper {
+    @include wrapper;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  ::ng-deep {
+    app-user-feed {
+      height: 100%;
+      margin-left: auto;
     }
   }
 }
