@@ -2,7 +2,6 @@
 @import 'mixins';
 @import 'fonts';
 
-$grey-font: #7b8284;
 .aditional-content {
   background-color: $grey-light;
   display: grid;
@@ -12,7 +11,7 @@ $grey-font: #7b8284;
     minmax(25%, 2.5fr)
     minmax(25%, 2.5fr)
     minmax(25%, 2.5fr);
-  margin-bottom: em(20);
+  margin-bottom: em(40);
   min-width: 100%;
   padding: em(20) em(20) em(40);
 

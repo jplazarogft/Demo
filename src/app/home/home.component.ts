@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AditionalContentSection } from '@sharedModels/aditional-content-section';
+import { LearnMoreIcon } from '@sharedModels/learn-more-icon';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
+import { learnMore } from '@mocks/learn-more';
 import { headerMenu } from '@mocks/menu';
 import { sections } from '@mocks/sections';
 
@@ -12,6 +14,7 @@ import { sections } from '@mocks/sections';
 export class HomeComponent implements OnInit {
   headerMenu: NavMenuOption[] = headerMenu;
   sections: AditionalContentSection[] = sections;
+  learnMore: LearnMoreIcon[] = learnMore;
 
   constructor() {}
 

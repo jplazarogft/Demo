@@ -8,11 +8,13 @@ import { LearnMoreComponent } from './components/learn-more/learn-more.component
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { TableComponent } from './components/table/table.component';
+import { LearnMoreIconComponent } from './components/learn-more/learn-more-icon/learn-more-icon.component';
 
 const declarations = [
   AccordionComponent,
   AditionalContentComponent,
   HeadingComponent,
+  LearnMoreIconComponent,
   LearnMoreComponent,
   NavMenuComponent,
   SearchInputComponent,
