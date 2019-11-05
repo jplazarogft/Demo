@@ -6,14 +6,21 @@
   </article>
   <article class="user-feed__level">
     <div>Level:</div>
-    <div></div>
+    <div>
+      <app-user-feed-tag *ngFor="let tag of userTags.level" [tag]="tag"></app-user-feed-tag>
+    </div>
   </article>
   <article class="user-feed__team">
     <div>Squad:</div>
-    <div>Online:</div>
+    <div>
+      Online:
+      <app-user-feed-tag *ngFor="let tag of userTags.squad" [tag]="tag"></app-user-feed-tag>
+    </div>
   </article>
   <article class="user-feed__location">
     <div>United Kingdom</div>
-    <div></div>
+    <div>
+      <app-user-feed-tag *ngFor="let tag of userTags.location" [tag]="tag"></app-user-feed-tag>
+    </div>
   </article>
 </section>
