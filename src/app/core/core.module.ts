@@ -13,12 +13,14 @@ import { UserService } from './services/user.service';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
+import { ProgressComponent } from './components/user-feed/progress/progress.component';
 
 const providers = [UserService];
 const declarations = [
   FooterComponent,
   FooterMenuComponent,
   HeaderComponent,
+  ProgressComponent,
   UserFeedComponent,
   UserFeedTagComponent,
 ];
