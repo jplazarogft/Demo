@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LearnMoreComponent } from './learn-more.component';
+import { LearnMoreIconComponent } from './learn-more-icon/learn-more-icon.component';
 
 describe('LearnMoreComponent', () => {
   let component: LearnMoreComponent;
@@ -8,9 +9,8 @@ describe('LearnMoreComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LearnMoreComponent ]
-    })
-    .compileComponents();
+      declarations: [LearnMoreComponent, LearnMoreIconComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
