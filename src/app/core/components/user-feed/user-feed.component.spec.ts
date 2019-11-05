@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserFeedComponent } from './user-feed.component';
+import { UserFeedTagComponent } from './user-feed-tag/user-feed-tag.component';
 
 describe('UserFeedComponent', () => {
   let component: UserFeedComponent;
@@ -8,9 +9,8 @@ describe('UserFeedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserFeedComponent ]
-    })
-    .compileComponents();
+      declarations: [UserFeedComponent, UserFeedTagComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
