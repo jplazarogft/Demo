@@ -8,7 +8,7 @@
     <div>
       Level:
       <span>{{ progress }}</span>
-      <app-progress></app-progress>
+      <app-progress [total]="progress"></app-progress>
     </div>
     <div>
       <app-user-feed-tag *ngFor="let tag of userTags.level" [tag]="tag"></app-user-feed-tag>

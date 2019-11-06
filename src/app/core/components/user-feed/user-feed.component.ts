@@ -7,8 +7,8 @@ import { tags } from '@mocks/user-feed-tags';
   styleUrls: ['./user-feed.component.scss'],
 })
 export class UserFeedComponent implements OnInit {
+  progress = 50;
   userTags = tags;
-  progress = 82;
 
   constructor() {}
 
