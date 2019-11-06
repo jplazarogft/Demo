@@ -15,6 +15,7 @@
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 50%);
   justify-content: center;
+  position: relative;
 
   article {
     div {
@@ -33,11 +34,41 @@
     }
   }
 
+  button {
+    border: none;
+    background: transparent;
+    color: rgba($grey-menu-link, 0.7);
+    font-size: 26px;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: em(3, 26);
+    transition: 0.5s;
+    top: em(3, 26);
+    width: auto;
+
+    &:hover {
+      color: rgba($grey-menu-link, 1);
+    }
+  }
+
   &__portrait {
   }
   &__info {
   }
   &__level {
+    div {
+      &:first-child {
+        align-items: baseline;
+        display: flex;
+      }
+    }
+    span {
+      color: $success;
+      font-weight: bold;
+      margin: 0 em(5, 17);
+    }
   }
   &__team {
   }

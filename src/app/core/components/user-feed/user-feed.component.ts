@@ -8,6 +8,7 @@ import { tags } from '@mocks/user-feed-tags';
 })
 export class UserFeedComponent implements OnInit {
   userTags = tags;
+  progress = 82;
 
   constructor() {}
 

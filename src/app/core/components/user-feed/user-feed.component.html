@@ -5,7 +5,11 @@
     <div>alexandergarcia@santander.es</div>
   </article>
   <article class="user-feed__level">
-    <div>Level:</div>
+    <div>
+      Level:
+      <span>{{ progress }}</span>
+      <app-progress></app-progress>
+    </div>
     <div>
       <app-user-feed-tag *ngFor="let tag of userTags.level" [tag]="tag"></app-user-feed-tag>
     </div>
@@ -23,4 +27,5 @@
       <app-user-feed-tag *ngFor="let tag of userTags.location" [tag]="tag"></app-user-feed-tag>
     </div>
   </article>
+  <button><i class="icon-menu"></i></button>
 </section>

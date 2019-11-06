@@ -46,7 +46,7 @@ header {
 
   ::ng-deep {
     app-user-feed {
-      height: 100%;
+      height: calc(100% - 1px);
       margin-left: auto;
     }
   }
