@@ -4,6 +4,7 @@ import { AccordionComponent } from '../shared/components/accordion/accordion.com
 import { AditionalContentComponent } from '../shared/components/aditional-content/aditional-content.component';
 import { HeadingComponent } from '../shared/components/heading/heading.component';
 import { HomeComponent } from './home.component';
+import { HomeFiltersComponent } from './home-filters/home-filters.component';
 import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { LearnMoreComponent } from '../shared/components/learn-more/learn-more.component';
 import { LearnMoreIconComponent } from '../shared/components/learn-more/learn-more-icon/learn-more-icon.component';
@@ -22,6 +23,7 @@ describe('HomeComponent', () => {
         AditionalContentComponent,
         HeadingComponent,
         HomeComponent,
+        HomeFiltersComponent,
         HomeMenuComponent,
         LearnMoreComponent,
         LearnMoreIconComponent,
