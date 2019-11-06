@@ -5,38 +5,36 @@ button,
 .btn {
   background-color: $white;
   border: 1px solid $main;
-
   font-family: $santander-hl-regular;
   color: $main;
   cursor: pointer;
   font-size: 16px;
   height: em(49, 24);
   width: em(200, 24);
-  &.btn {
-    border-radius: 100px;
 
-    &--small {
-      border-radius: em(20, 16);
-      font-size: em(16);
-      height: em(35, 16);
-      width: em(140, 16);
-    }
+  border-radius: 100px;
 
-    &--red {
-      background-color: $main;
-      color: $white;
+  &--small {
+    border-radius: em(20, 16);
+    font-size: em(16);
+    height: em(35, 16);
+    width: em(140, 16);
+  }
 
-      &:hover {
-        &:not(:disabled) {
-          background-color: darken($color: $main, $amount: 4%);
-        }
-      }
-    }
+  &--red {
+    background-color: $main;
+    color: $white;
 
     &:hover {
       &:not(:disabled) {
-        background-color: rgba($main, 0.05);
+        background-color: darken($color: $main, $amount: 4%);
       }
+    }
+  }
+
+  &:hover {
+    &:not(:disabled) {
+      background-color: rgba($main, 0.05);
     }
   }
 
