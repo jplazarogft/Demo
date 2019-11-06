@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { FooterMenuComponent } from './core/components/footer/footer-menu/footer-menu.component';
 import { HeaderComponent } from './core/components/header/header.component';
+import { ProgressComponent } from './core/components/user-feed/progress/progress.component';
 import { UserFeedComponent } from './core/components/user-feed/user-feed.component';
 import { UserFeedTagComponent } from './core/components/user-feed/user-feed-tag/user-feed-tag.component';
 
@@ -16,6 +17,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         FooterComponent,
         FooterMenuComponent,
+        ProgressComponent,
         UserFeedComponent,
         UserFeedTagComponent,
       ],
