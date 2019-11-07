@@ -4,7 +4,7 @@
 
 .heading {
   display: flex;
-  margin-bottom: em(70);
+  margin-bottom: em(16);
 
   button {
     border-radius: 0;
@@ -22,7 +22,7 @@
     h1 {
       color: $main;
       display: inline-block;
-      font-size: 32px;
+      font-size: em(32);
       font-family: $open-sans-light;
       margin-right: em(10);
     }
@@ -32,7 +32,7 @@
       color: rgba($grey-menu-link, 0.7);
       display: inline-flex;
       font-family: $open-sans;
-      font-size: 14px;
+      font-size: em(14);
       height: em(27);
       position: relative;
       padding-left: em(28);

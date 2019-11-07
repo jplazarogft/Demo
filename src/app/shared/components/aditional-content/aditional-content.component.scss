@@ -17,7 +17,7 @@
 
   a {
     color: $main;
-    font-size: 12px;
+    font-size: em(12);
 
     &:hover {
       color: darken($main, 10%);
@@ -27,7 +27,7 @@
   h3 {
     color: $grey-dark-title;
     font-family: $open-sans-bold;
-    font-size: 18px;
+    font-size: em(18);
     margin-bottom: em(24, 18);
     text-transform: uppercase;
   }
@@ -43,7 +43,7 @@
 
     a {
       color: $grey-font;
-      font-size: 13px;
+      font-size: em(13);
       margin-bottom: em(15, 13);
       margin-right: em(15, 13);
 

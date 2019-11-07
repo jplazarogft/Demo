@@ -3,7 +3,6 @@
 @import 'fonts';
 
 $blue-link: #11546f;
-$alternate-btn: #576c81;
 table {
   display: grid;
   border-collapse: collapse;
@@ -51,7 +50,7 @@ tbody {
 th,
 td {
   font-family: $santander-tx-regular;
-  font-size: 12px;
+  font-size: em(12);
   padding: em(12, 12) em(12, 12) em(15) 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,7 +65,7 @@ th {
   &:first-child {
     color: $main;
     font-family: $open-sans;
-    font-size: 16px;
+    font-size: em(16);
   }
 }
 
@@ -83,8 +82,8 @@ td {
   color: $grey-dark;
   border-bottom: 1px solid $grey-border;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: em(10);
+  padding-bottom: em(10);
 
   a {
     color: $blue-link;
@@ -99,8 +98,9 @@ td {
     border: none;
     border-radius: 2px;
     color: $white;
-    height: em(27);
-    padding: em(0) em(15);
+    font-size: 17px;
+    height: em(27, 17);
+    padding: em(0) em(15, 17);
 
     &.row {
       &--edit {
@@ -124,7 +124,7 @@ td {
   }
 
   i {
-    font-size: 24px;
+    font-size: em(24);
     margin-right: em(5, 24);
     &.icon-table {
       color: #0aab62;
@@ -154,11 +154,8 @@ td {
   &:first-child {
     color: $black;
     font-family: $santander-tx-bold;
-    font-size: 16px;
+    font-size: em(16);
   }
-}
-
-tr:nth-child(even) td {
 }
 
 .right {

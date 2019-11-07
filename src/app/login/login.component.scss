@@ -39,7 +39,7 @@
 
     button {
       font-family: $santander-hl-bold;
-      font-size: 24px;
+      font-size: em(24);
     }
 
     input {
@@ -70,7 +70,7 @@
   }
 
   &__forgot-password {
-    font-size: 16;
+    font-size: em(16);
     color: $main;
   }
 

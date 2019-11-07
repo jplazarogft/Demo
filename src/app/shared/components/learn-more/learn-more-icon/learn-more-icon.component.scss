@@ -44,7 +44,7 @@ article {
     width: em(80);
 
     i {
-      font-size: 30px;
+      font-size: em(30);
     }
 
     &.yellow {
@@ -81,6 +81,6 @@ article {
   p {
     color: $text-color;
     font-family: $santander-tx-regular;
-    font-size: 21px;
+    font-size: em(21);
   }
 }
