@@ -20,3 +20,16 @@ export const footerMenu = [
     link: '',
   },
 ];
+
+export const headerMenu = [
+  {
+    active: true,
+    label: 'My Projects',
+    link: '',
+  },
+  {
+    active: false,
+    label: 'Catalogue',
+    link: '',
+  },
+];

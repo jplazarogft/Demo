@@ -1,0 +1,173 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+$blue-link: #11546f;
+table {
+  display: grid;
+  border-collapse: collapse;
+  margin-bottom: em(20);
+  min-width: 100%;
+  /* These are just initial values which are overriden using JavaScript when a column is resized */
+  grid-template-columns:
+    minmax(36%, 3fr)
+    minmax(8%, 1fr)
+    minmax(8%, 1fr)
+    minmax(8%, 1fr)
+    minmax(8%, 1fr)
+    minmax(12%, 1fr)
+    minmax(20%, 2fr);
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+thead {
+  tr {
+    th {
+      align-items: flex-end;
+      border-bottom: 1px solid $grey-border;
+      display: flex;
+      padding: em(12, 12) em(12, 12) em(5, 12) 0;
+    }
+  }
+}
+
+tbody {
+  tr {
+    cursor: pointer;
+
+    &:hover {
+      td {
+        background-color: $hover;
+      }
+    }
+  }
+}
+
+th,
+td {
+  font-family: $santander-tx-regular;
+  font-size: em(12);
+  padding: em(12, 12) em(12, 12) em(15) 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  top: 0;
+  text-align: left;
+  font-weight: normal;
+  position: relative;
+  &:first-child {
+    color: $main;
+    font-family: $open-sans;
+    font-size: em(16);
+  }
+}
+
+th:last-child {
+  border: 0;
+}
+
+th:hover .resize-handle {
+  opacity: 0.3;
+}
+
+td {
+  align-items: center;
+  color: $grey-dark;
+  border-bottom: 1px solid $grey-border;
+  display: flex;
+  padding-top: em(10);
+  padding-bottom: em(10);
+
+  a {
+    color: $blue-link;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($color: $blue-link, $amount: 30%);
+    }
+  }
+
+  button {
+    border: none;
+    border-radius: 2px;
+    color: $white;
+    font-size: 17px;
+    height: em(27, 17);
+    padding: em(0) em(15, 17);
+
+    &.row {
+      &--edit {
+        background-color: $main;
+        &:hover {
+          background-color: darken($color: $main, $amount: 4%);
+        }
+      }
+      &--view {
+        background-color: $alternate-btn;
+
+        &:hover {
+          background-color: darken($color: $alternate-btn, $amount: 5%);
+        }
+      }
+    }
+
+    & + button {
+      margin-left: em(5);
+    }
+  }
+
+  i {
+    font-size: em(24);
+    margin-right: em(5, 24);
+    &.icon-table {
+      color: #0aab62;
+    }
+    &.icon-chart-pie {
+      color: #ef642f;
+    }
+    &.icon-modx {
+      color: #de4251;
+      margin-right: 0;
+    }
+    &.icon-codiepie {
+      color: #86d9cf;
+      margin-right: 0;
+    }
+    &.icon-first-order {
+      color: #0675c7;
+      margin-right: 0;
+    }
+  }
+
+  span {
+    color: rgba($grey-menu-link, 0.7);
+    font-family: $santander-tx-regular;
+  }
+
+  &:first-child {
+    color: $black;
+    font-family: $santander-tx-bold;
+    font-size: em(16);
+  }
+}
+
+.right {
+  justify-content: flex-end;
+  & + td,
+  & + th {
+    &:not(.right) {
+      padding-left: em(12, 12);
+    }
+  }
+}
+
+.black-font {
+  color: $black;
+}
