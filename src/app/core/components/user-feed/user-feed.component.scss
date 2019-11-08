@@ -7,13 +7,13 @@
   box-shadow: 0 1px 2px 0 rgba($black, 0.18), 0 1px 2px 0 rgba($black, 0.04),
     0 2px 6px 0 rgba($black, 0.04);
   height: 100%;
-  padding: em(6) em(12);
+  padding: em(6) em(12) em(6) 0;
   width: em(538);
 
   align-content: end;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: 10% 40% 50%;
+  grid-template-rows: 50% 50%;
   justify-content: center;
   position: relative;
 
@@ -54,6 +54,13 @@
   }
 
   &__portrait {
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    img {
+      max-width: em(36);
+      object-fit: content;
+    }
   }
   &__info {
   }
