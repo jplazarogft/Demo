@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ActionMenuComponent } from './components/action-menu/action-menu.component';
 import { AditionalContentComponent } from './components/aditional-content/aditional-content.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { HeadingComponent } from './components/heading/heading.component';
@@ -12,6 +13,7 @@ import { TableComponent } from './components/table/table.component';
 
 const declarations = [
   AccordionComponent,
+  ActionMenuComponent,
   AditionalContentComponent,
   HeadingComponent,
   LearnMoreComponent,
@@ -22,6 +24,7 @@ const declarations = [
 ];
 const exports = [
   AccordionComponent,
+  ActionMenuComponent,
   AditionalContentComponent,
   HeadingComponent,
   LearnMoreComponent,
