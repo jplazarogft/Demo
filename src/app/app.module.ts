@@ -6,11 +6,19 @@ import { AppRoutingModule } from './app-routing.module'; // must be imported as 
 import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
+import { DetailModule } from './detail/detail.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 
 // Modules
-const imports = [BrowserModule, CoreModule, HomeModule, LoginModule, AppRoutingModule];
+const imports = [
+  BrowserModule,
+  CoreModule,
+  DetailModule,
+  HomeModule,
+  LoginModule,
+  AppRoutingModule,
+];
 
 @NgModule({
   declarations: [AppComponent],
