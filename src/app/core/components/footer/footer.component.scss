@@ -15,16 +15,16 @@ footer {
     align-items: center;
     display: flex;
     height: 100%;
+
+    &.footer__wrapper {
+      @include wrapper;
+    }
   }
 
   p {
     color: $white;
     font-family: $open-sans;
     font-size: em(12);
-  }
-
-  &__wrapper {
-    @include wrapper;
   }
 }
 
