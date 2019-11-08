@@ -57,13 +57,16 @@
     align-items: flex-start;
     justify-content: center;
     display: flex;
+
     img {
       max-width: em(36);
       object-fit: content;
     }
   }
+
   &__info {
   }
+
   &__level {
     div {
       &:first-child {
@@ -71,14 +74,17 @@
         display: flex;
       }
     }
+
     span {
       color: $success;
       font-weight: bold;
       margin: 0 em(5, 17);
     }
   }
+
   &__team {
   }
+
   &__location {
   }
 }
