@@ -90,3 +90,11 @@
   background: -ms-linear-gradient(top, $color1 0%, $color2 100%);
   background: linear-gradient(to bottom, $color1 0%, $color2 100%);
 }
+
+@mixin header-title {
+  color: $main;
+  display: inline-block;
+  font-size: em(32);
+  font-family: $open-sans-light;
+  margin-right: em(10);
+}

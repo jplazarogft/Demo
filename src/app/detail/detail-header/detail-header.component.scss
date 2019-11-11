@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+.detail-header {
+  &__title {
+    margin-bottom: em(24);
+
+    h1 {
+      @include header-title;
+    }
+
+    span {
+      &.icon {
+        color: $chart-pie;
+        font-size: em(24, 32);
+        margin-right: em(5, 32);
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActionMenuComponent } from 'src/app/shared/components/action-menu/action-menu.component';
-import { HomeHeaderComponent } from './home-heading.component';
+import { HomeHeaderComponent } from './home-header.component';
 import { IconGroupComponent } from 'src/app/shared/components/icon-group/icon-group.component';
 
 describe('HomeHeaderComponent', () => {

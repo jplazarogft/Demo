@@ -60,8 +60,8 @@
   }
 
   &--watch {
-    color: #c99898;
     &::before {
+      color: #c99898;
       content: '\e80a';
     }
   }
