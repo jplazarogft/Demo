@@ -30,6 +30,12 @@
     }
   }
 
+  &--download {
+    &::before {
+      background-image: url('/assets/images/icons/tag-atom.svg');
+    }
+  }
+
   &--inbox {
     &::before {
       background-image: url('/assets/images/icons/tag-inbox.svg');
