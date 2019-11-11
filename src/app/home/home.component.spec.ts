@@ -11,6 +11,8 @@ import { LearnMoreIconComponent } from '../shared/components/learn-more/learn-mo
 import { NavMenuComponent } from '../shared/components/nav-menu/nav-menu.component';
 import { SearchInputComponent } from '../shared/components/search-input/search-input.component';
 import { TableComponent } from '../shared/components/table/table.component';
+import { IconGroupComponent } from '../shared/components/icon-group/icon-group.component';
+import { ActionMenuComponent } from '../shared/components/action-menu/action-menu.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -20,11 +22,13 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AccordionComponent,
+        ActionMenuComponent,
         AditionalContentComponent,
         HomeComponent,
         HomeFiltersComponent,
         HomeHeadingComponent,
         HomeMenuComponent,
+        IconGroupComponent,
         LearnMoreComponent,
         LearnMoreIconComponent,
         NavMenuComponent,
