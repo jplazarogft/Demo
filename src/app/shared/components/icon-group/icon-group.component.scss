@@ -10,47 +10,59 @@
   font-size: em(14);
   height: em(27);
   position: relative;
-  padding-left: em(28);
 
   &::before {
-    content: '';
-    background-position: center;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: em(20, 14);
-    left: 0;
-    position: absolute;
-    top: em(2, 14);
-    width: em(20, 14);
+    font-size: 20px;
+    @include icon-style;
   }
 
   &--atom {
     &::before {
-      background-image: url('/assets/images/icons/tag-atom.svg');
+      color: #7e7e7e;
+      content: '\f1b3';
+      width: 1.2em; // this icon is a bit larger than the rest, so a wider container is required
     }
   }
 
   &--download {
     &::before {
-      background-image: url('/assets/images/icons/tag-atom.svg');
+      color: #9bc3d3;
+      content: '\e808';
     }
   }
 
   &--inbox {
     &::before {
-      background-image: url('/assets/images/icons/tag-inbox.svg');
+      color: #30a536;
+      content: '\e80b';
     }
   }
 
   &--microsoft {
     &::before {
-      background-image: url('/assets/images/icons/tag-microsoft.svg');
+      color: #c1c9c7;
+      content: '\f17a';
+    }
+  }
+
+  &--public {
+    &::before {
+      color: #56c896;
+      content: '\e807';
+    }
+  }
+
+  &--technical {
+    &::before {
+      color: #ffcc33;
+      content: '\e809';
     }
   }
 
   &--watch {
+    color: #c99898;
     &::before {
-      background-image: url('/assets/images/icons/tag-watch.svg');
+      content: '\e80a';
     }
   }
 
