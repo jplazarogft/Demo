@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailComponent } from './detail.component';
+import { PageMenuComponent } from '../shared/components/page-menu/page-menu.component';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
@@ -8,9 +9,8 @@ describe('DetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailComponent ]
-    })
-    .compileComponents();
+      declarations: [DetailComponent, PageMenuComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

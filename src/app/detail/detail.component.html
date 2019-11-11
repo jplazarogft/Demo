@@ -1,4 +1,6 @@
 <section class="detail">
+  <app-page-menu [menu]="headerMenu" (menuLinkClicked)="updateActiveMenuLink($event)">
+  </app-page-menu>
   <section class="detail__container">
     <app-detail-header [icons]="icons" [icon]="iconClass" [title]="title"></app-detail-header>
   </section>

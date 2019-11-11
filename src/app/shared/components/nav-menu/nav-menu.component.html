@@ -5,8 +5,9 @@
         href="{{ menuOption.link }}"
         [ngClass]="{ active: menuOption.active }"
         (click)="updateActive($event, menuOption.label)"
-        >{{ menuOption.label }}</a
       >
+        {{ menuOption.label }}
+      </a>
     </li>
   </ul>
 </nav>

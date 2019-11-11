@@ -8,6 +8,7 @@ import { IconGroupComponent } from './components/icon-group/icon-group.component
 import { LearnMoreComponent } from './components/learn-more/learn-more.component';
 import { LearnMoreIconComponent } from './components/learn-more/learn-more-icon/learn-more-icon.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { PageMenuComponent } from './components/page-menu/page-menu.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { TableComponent } from './components/table/table.component';
 
@@ -19,6 +20,7 @@ const declarations = [
   LearnMoreComponent,
   LearnMoreIconComponent,
   NavMenuComponent,
+  PageMenuComponent,
   SearchInputComponent,
   TableComponent,
 ];
@@ -29,6 +31,7 @@ const exports = [
   IconGroupComponent,
   LearnMoreComponent,
   NavMenuComponent,
+  PageMenuComponent,
   SearchInputComponent,
   TableComponent,
 ];

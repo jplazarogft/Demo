@@ -5,7 +5,6 @@ import { AditionalContentComponent } from '../shared/components/aditional-conten
 import { HomeComponent } from './home.component';
 import { HomeFiltersComponent } from './home-filters/home-filters.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
-import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { LearnMoreComponent } from '../shared/components/learn-more/learn-more.component';
 import { LearnMoreIconComponent } from '../shared/components/learn-more/learn-more-icon/learn-more-icon.component';
 import { NavMenuComponent } from '../shared/components/nav-menu/nav-menu.component';
@@ -27,7 +26,6 @@ describe('HomeComponent', () => {
         HomeComponent,
         HomeFiltersComponent,
         HomeHeaderComponent,
-        HomeMenuComponent,
         IconGroupComponent,
         LearnMoreComponent,
         LearnMoreIconComponent,
