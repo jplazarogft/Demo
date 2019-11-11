@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailHeaderComponent } from './detail-header.component';
+import { IconGroupComponent } from 'src/app/shared/components/icon-group/icon-group.component';
 
 describe('DetailHeaderComponent', () => {
   let component: DetailHeaderComponent;
@@ -8,9 +9,8 @@ describe('DetailHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [DetailHeaderComponent, IconGroupComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

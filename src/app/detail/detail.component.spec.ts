@@ -1,7 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailComponent } from './detail.component';
+import { DetailHeaderComponent } from './detail-header/detail-header.component';
+import { IconGroupComponent } from '../shared/components/icon-group/icon-group.component';
+import { NavMenuComponent } from '../shared/components/nav-menu/nav-menu.component';
 import { PageMenuComponent } from '../shared/components/page-menu/page-menu.component';
+import { SearchInputComponent } from '../shared/components/search-input/search-input.component';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
@@ -9,7 +13,14 @@ describe('DetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DetailComponent, PageMenuComponent],
+      declarations: [
+        DetailComponent,
+        DetailHeaderComponent,
+        IconGroupComponent,
+        NavMenuComponent,
+        PageMenuComponent,
+        SearchInputComponent,
+      ],
     }).compileComponents();
   }));
 
