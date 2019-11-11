@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+.tag {
+  align-items: center;
+  color: rgba($grey-menu-link, 0.7);
+  display: inline-flex;
+  font-family: $open-sans;
+  font-size: em(14);
+  height: em(27);
+  position: relative;
+  padding-left: em(28);
+
+  &::before {
+    content: '';
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: em(20, 14);
+    left: 0;
+    position: absolute;
+    top: em(2, 14);
+    width: em(20, 14);
+  }
+
+  &--atom {
+    &::before {
+      background-image: url('/assets/images/icons/tag-atom.svg');
+    }
+  }
+
+  &--inbox {
+    &::before {
+      background-image: url('/assets/images/icons/tag-inbox.svg');
+    }
+  }
+
+  &--microsoft {
+    &::before {
+      background-image: url('/assets/images/icons/tag-microsoft.svg');
+    }
+  }
+
+  &--watch {
+    &::before {
+      background-image: url('/assets/images/icons/tag-watch.svg');
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: em(15);
+  }
+}

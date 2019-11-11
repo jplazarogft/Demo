@@ -5,6 +5,7 @@ import { ActionMenuComponent } from './components/action-menu/action-menu.compon
 import { AditionalContentComponent } from './components/aditional-content/aditional-content.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { HeadingComponent } from './components/heading/heading.component';
+import { IconGroupComponent } from './components/icon-group/icon-group.component';
 import { LearnMoreComponent } from './components/learn-more/learn-more.component';
 import { LearnMoreIconComponent } from './components/learn-more/learn-more-icon/learn-more-icon.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
@@ -16,6 +17,7 @@ const declarations = [
   ActionMenuComponent,
   AditionalContentComponent,
   HeadingComponent,
+  IconGroupComponent,
   LearnMoreComponent,
   LearnMoreIconComponent,
   NavMenuComponent,
@@ -27,6 +29,7 @@ const exports = [
   ActionMenuComponent,
   AditionalContentComponent,
   HeadingComponent,
+  IconGroupComponent,
   LearnMoreComponent,
   NavMenuComponent,
   SearchInputComponent,
