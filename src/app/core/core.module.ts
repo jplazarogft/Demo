@@ -16,7 +16,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProgressComponent } from './components/user-feed/progress/progress.component';
 
 const providers = [UserService];
-const declarations = [
+const components = [
   FooterComponent,
   FooterMenuComponent,
   HeaderComponent,
@@ -24,10 +24,11 @@ const declarations = [
   UserFeedComponent,
   UserFeedTagComponent,
 ];
+
 const imports = [CommonModule, SharedModule];
 
 @NgModule({
-  declarations,
+  declarations: [...components],
   imports,
   providers,
   exports: [HeaderComponent, FooterComponent, UserFeedComponent],

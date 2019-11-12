@@ -14,15 +14,16 @@ import { sections } from '@mocks/sections';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  headerMenu: NavMenuOption[] = headerMenu;
-  activeHeaderMenuOption = 'Catalogue';
-  detailMenu: NavMenuOption[] = detailMenu;
   activeDetailMenuOption = 'Overview';
+  activeHeaderMenuOption = 'Catalogue';
+  headerMenu: NavMenuOption[] = headerMenu;
+  detailMenu: NavMenuOption[] = detailMenu;
   icons: Icon[] = detailIcons;
   iconClass = 'chart-pie';
   learnMore: LearnMoreIcon[] = learnMore;
-  title = 'Android.name.component.button.call';
+  overviewURL = 'https://stackblitz.com/edit/embed?embed=1&file=app/app.component.ts';
   sections: AditionalContentSection[] = sections;
+  title = 'Android.name.component.button.call';
 
   constructor() {}
 

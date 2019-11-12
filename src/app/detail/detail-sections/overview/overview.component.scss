@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+h3 {
+  color: $grey-font;
+  font-family: $santander-tx-regular;
+  font-size: em(18);
+  margin-bottom: em(10, 18);
+}
+
+iframe {
+  border: 1px solid #9bc3d3;
+  height: em(443);
+  width: 100%;
+}

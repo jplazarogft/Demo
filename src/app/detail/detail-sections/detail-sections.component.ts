@@ -8,8 +8,9 @@ import { NavMenuComponent } from 'src/app/shared/components/nav-menu/nav-menu.co
   styleUrls: ['./detail-sections.component.scss'],
 })
 export class DetailSectionsComponent implements OnInit {
-  @Input() sections: NavMenuOption[] = [];
   @Input() active = '';
+  @Input() sections: NavMenuOption[] = [];
+  @Input() url = '';
   @Output() menuLinkClicked = new EventEmitter<NavMenuOption>();
 
   constructor() {}

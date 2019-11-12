@@ -7,9 +7,7 @@
     ></app-nav-menu>
   </section>
   <section class="detail-sections__content" [ngSwitch]="active">
-    <p *ngSwitchCase="'Overview'">
-      ACTIVE 1
-    </p>
+    <app-overview *ngSwitchCase="'Overview'" [url]="url"></app-overview>
     <p *ngSwitchCase="'Code'">
       ACTIVE 2
     </p>
