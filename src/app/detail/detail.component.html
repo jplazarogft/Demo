@@ -1,7 +1,11 @@
 <section class="detail">
   <app-page-menu [menu]="headerMenu" (menuLinkClicked)="updateActiveMenuLink($event)">
   </app-page-menu>
-  <section class="detail__container">
+
+  <section class="detail__header">
     <app-detail-header [icons]="icons" [icon]="iconClass" [title]="title"></app-detail-header>
+  </section>
+  <section class="detail__body">
+    <app-detail-sections></app-detail-sections>
   </section>
 </section>

@@ -3,8 +3,14 @@
 @import 'fonts';
 
 .detail {
-  &__container {
-    background-color: $white;
-    padding: em(10) em(30);
+  background-color: $white;
+
+  &__header {
+    padding: em(30) em(30) 0;
+    margin-bottom: em(50);
+  }
+
+  &__body {
+    margin-top: em(10);
   }
 }

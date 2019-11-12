@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailComponent } from './detail.component';
 import { DetailHeaderComponent } from './detail-header/detail-header.component';
+import { DetailSectionsComponent } from './detail-sections/detail-sections.component';
 import { IconGroupComponent } from '../shared/components/icon-group/icon-group.component';
 import { NavMenuComponent } from '../shared/components/nav-menu/nav-menu.component';
 import { PageMenuComponent } from '../shared/components/page-menu/page-menu.component';
@@ -16,6 +17,7 @@ describe('DetailComponent', () => {
       declarations: [
         DetailComponent,
         DetailHeaderComponent,
+        DetailSectionsComponent,
         IconGroupComponent,
         NavMenuComponent,
         PageMenuComponent,
