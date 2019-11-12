@@ -1,5 +1,9 @@
 <section class="detail">
-  <app-page-menu [menu]="headerMenu" (menuLinkClicked)="updateActiveMenuLink($event)">
+  <app-page-menu
+    [menu]="headerMenu"
+    [activeOption]="activeHeaderMenuOption"
+    (menuLinkClicked)="updateActiveMenuLink($event)"
+  >
   </app-page-menu>
 
   <section class="detail__header">

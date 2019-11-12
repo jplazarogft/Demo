@@ -1,10 +1,9 @@
 <nav>
-  <ul>
+  <ul #menuUL>
     <li *ngFor="let menuOption of menu">
       <a
-        href="{{ menuOption.link }}"
-        [ngClass]="{ active: menuOption.active }"
-        (click)="updateActive($event, menuOption.label)"
+        [ngClass]="{ active: menuOption.label === activeOption }"
+        (click)="menuClick($event, menuOption)"
       >
         {{ menuOption.label }}
       </a>

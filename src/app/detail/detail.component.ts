@@ -11,6 +11,7 @@ import { NavMenuOption } from '@sharedModels/nav-menu-option';
 })
 export class DetailComponent implements OnInit {
   headerMenu: NavMenuOption[] = headerMenu;
+  activeHeaderMenuOption = 'Catalogue';
   icons: Icon[] = detailIcons;
   iconClass = 'chart-pie';
   title = 'Android.name.component.button.call';
@@ -19,11 +20,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {}
 
-  updateActiveMenuLink = activeLabel => {
-    const newHeaderMenu = this.headerMenu.map(option => {
-      const { label, link } = option;
-      return { active: label === activeLabel, label, link };
-    });
-    this.headerMenu = newHeaderMenu;
+  updateActiveMenuLink = (option: NavMenuOption) => {
+    console.log(`Menu Clicked: ${option.label}`);
   };
 }
