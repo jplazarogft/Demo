@@ -8,7 +8,8 @@ import { NavMenuOption } from '@sharedModels/nav-menu-option';
 })
 export class PageMenuComponent implements OnInit {
   @Input() menu?: NavMenuOption[] = [];
-  @Output() menuLinkClicked = new EventEmitter<string>();
+  @Input() activeOption = '';
+  @Output() menuLinkClicked = new EventEmitter<NavMenuOption>();
 
   constructor() {}
 
