@@ -1,5 +1,9 @@
 <section class="main">
-  <app-page-menu [menu]="headerMenu" (menuLinkClicked)="updateActiveMenuLink($event)">
+  <app-page-menu
+    [menu]="headerMenu"
+    [activeOption]="activeHeaderMenuOption"
+    (menuLinkClicked)="updateActiveMenuLink($event)"
+  >
   </app-page-menu>
   <section class="main__container">
     <app-home-header [icons]="homeIcons" [title]="title"></app-home-header>

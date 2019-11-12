@@ -15,6 +15,7 @@ import { Icon } from '@sharedModels/icon';
 })
 export class HomeComponent implements OnInit {
   headerMenu: NavMenuOption[] = headerMenu;
+  activeHeaderMenuOption = 'My Projects';
   sections: AditionalContentSection[] = sections;
   learnMore: LearnMoreIcon[] = learnMore;
   homeIcons: Icon[] = homeIcons;
@@ -24,11 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {}
 
-  updateActiveMenuLink = activeLabel => {
-    const newHeaderMenu = this.headerMenu.map(option => {
-      const { label, link } = option;
-      return { active: label === activeLabel, label, link };
-    });
-    this.headerMenu = newHeaderMenu;
+  updateActiveMenuLink = (option: NavMenuOption) => {
+    console.log(`Menu Clicked: ${option.label}`);
   };
 }
