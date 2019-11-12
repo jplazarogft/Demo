@@ -26,6 +26,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   updateActiveMenuLink = (option: NavMenuOption) => {
-    console.log(`Menu Clicked: ${option.label}`);
+    this.activeHeaderMenuOption = option.label;
   };
 }

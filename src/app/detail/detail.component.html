@@ -10,6 +10,14 @@
     <app-detail-header [icons]="icons" [icon]="iconClass" [title]="title"></app-detail-header>
   </section>
   <section class="detail__body">
-    <app-detail-sections></app-detail-sections>
+    <app-detail-sections
+      [sections]="detailMenu"
+      [active]="activeDetailMenuOption"
+      (menuLinkClicked)="updateSectionMenuLink($event)"
+    ></app-detail-sections>
+  </section>
+  <section class="detail__related-content">
+    <app-aditional-content [sections]="sections"></app-aditional-content>
+    <app-learn-more [content]="learnMore"></app-learn-more>
   </section>
 </section>

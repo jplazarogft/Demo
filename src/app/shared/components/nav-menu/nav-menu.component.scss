@@ -2,10 +2,6 @@
 @import 'variables';
 @import 'mixins';
 
-:host {
-  height: 100%;
-}
-
 nav {
   display: inline-flex;
   height: 100%;

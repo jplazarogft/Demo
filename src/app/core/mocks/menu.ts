@@ -26,4 +26,27 @@ export const headerMenu = [
     label: 'Catalogue',
     link: '',
   },
+  {
+    label: 'Support',
+    link: '',
+  },
+];
+
+export const detailMenu = [
+  {
+    label: 'Overview',
+    link: '',
+  },
+  {
+    label: 'Code',
+    link: '',
+  },
+  {
+    label: 'Dependencies',
+    link: '',
+  },
+  {
+    label: 'Metadata',
+    link: '',
+  },
 ];

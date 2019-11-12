@@ -1,5 +1,5 @@
 <nav>
-  <ul #menuUL>
+  <ul>
     <li *ngFor="let menuOption of menu">
       <a
         [ngClass]="{ active: menuOption.label === activeOption }"
