@@ -98,3 +98,10 @@
   font-family: $open-sans-light;
   margin-right: em(10);
 }
+
+@mixin main-container {
+  background-color: $white;
+  border-left: 1px solid $grey-border;
+  border-right: 1px solid $grey-border;
+  border-bottom: 1px solid $grey-border;
+}
