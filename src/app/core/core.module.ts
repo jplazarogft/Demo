@@ -6,16 +6,17 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FooterMenuComponent } from './components/footer/footer-menu/footer-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserFeedComponent } from './components/user-feed/user-feed.component';
+import { ProgressComponent } from './components/user-feed/progress/progress.component';
 import { UserFeedTagComponent } from './components/user-feed/user-feed-tag/user-feed-tag.component';
 
 // Services
-import { UserService } from './services/user.service';
+import { ApiService } from '@coreServices/api.service';
+import { UserService } from '@coreServices/user.service';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
-import { ProgressComponent } from './components/user-feed/progress/progress.component';
 
-const providers = [UserService];
+const providers = [ApiService, UserService];
 const components = [
   FooterComponent,
   FooterMenuComponent,
