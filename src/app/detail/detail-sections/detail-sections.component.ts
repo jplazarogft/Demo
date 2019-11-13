@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ComponentProperty } from '@sharedModels/component-property';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
-import { NavMenuComponent } from 'src/app/shared/components/nav-menu/nav-menu.component';
 
 @Component({
   selector: 'app-detail-sections',
@@ -11,6 +11,7 @@ export class DetailSectionsComponent implements OnInit {
   @Input() active = '';
   @Input() sections: NavMenuOption[] = [];
   @Input() url = '';
+  @Input() properties: ComponentProperty[] = [];
   @Output() menuLinkClicked = new EventEmitter<NavMenuOption>();
 
   constructor() {}

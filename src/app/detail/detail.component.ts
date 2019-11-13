@@ -1,3 +1,4 @@
+import { ComponentProperty } from '@sharedModels/component-property';
 import { Component, OnInit } from '@angular/core';
 import { AditionalContentSection } from '@sharedModels/aditional-content-section';
 import { Icon } from '@sharedModels/icon';
@@ -24,6 +25,43 @@ export class DetailComponent implements OnInit {
   overviewURL = 'https://stackblitz.com/edit/embed?embed=1&file=app/app.component.ts';
   sections: AditionalContentSection[] = sections;
   title = 'Android.name.component.button.call';
+  properties: ComponentProperty[] = [
+    {
+      name: 'Active',
+      type: 'Boolean',
+      default: 'false',
+    },
+    {
+      name: 'Loading',
+      type: 'Boolean',
+      default: 'false',
+    },
+    {
+      name: 'Disabled',
+      type: 'Boolean',
+      default: 'false',
+    },
+    {
+      name: 'Type',
+      type: 'String',
+      default: '',
+    },
+    {
+      name: 'Shape',
+      type: 'String',
+      default: '',
+    },
+    {
+      name: 'Size',
+      type: 'String',
+      default: '',
+    },
+    {
+      name: 'ClassObject',
+      type: '',
+      default: '',
+    },
+  ];
 
   constructor() {}
 
