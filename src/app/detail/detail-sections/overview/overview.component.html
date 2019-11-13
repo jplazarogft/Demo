@@ -1,2 +1,37 @@
-<h3>Component example</h3>
-<iframe [src]="url | safe" frameborder="0"></iframe>
+<section class="overview">
+  <h3>Component example</h3>
+  <iframe [src]="url | safe" frameborder="0"></iframe>
+  <section class="overview__pagination">
+    <div class="overview__thumb overview__thumb--active">
+      <img src="https://via.placeholder.com/120.png" alt="" />
+    </div>
+    <div class="overview__thumb">
+      <img src="https://via.placeholder.com/120.png" alt="" />
+    </div>
+    <div class="overview__thumb">
+      <img src="https://via.placeholder.com/120.png" alt="" />
+    </div>
+    <div class="overview__thumb">
+      <img src="https://via.placeholder.com/120.png" alt="" />
+    </div>
+  </section>
+  <section class="overview__properties" *ngIf="properties?.length > 0">
+    <h3>Properties</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let property of properties">
+          <td>{{ property.name }}</td>
+          <td>{{ property.type }}</td>
+          <td>{{ property.default }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>

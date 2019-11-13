@@ -2,15 +2,100 @@
 @import 'mixins';
 @import 'fonts';
 
-h3 {
-  color: $grey-font;
-  font-family: $santander-tx-regular;
-  font-size: em(18);
-  margin-bottom: em(10, 18);
-}
+.overview {
+  h3 {
+    color: $grey-font;
+    font-family: $santander-tx-regular;
+    font-size: em(18);
+    margin-bottom: em(10, 18);
+  }
 
-iframe {
-  border: 1px solid #9bc3d3;
-  height: em(443);
-  width: 100%;
+  iframe {
+    border: 1px solid $blue-mid;
+    height: em(443);
+    margin-bottom: em(25);
+    width: 100%;
+  }
+
+  &__pagination {
+    display: flex;
+    margin-bottom: em(25);
+  }
+
+  &__thumb {
+    background-color: $white;
+    border: solid 2px rgba($color: $grey-border, $alpha: 0.5);
+    cursor: pointer;
+    height: em(120);
+    overflow: hidden;
+    width: em(120);
+
+    img {
+      max-width: 100%;
+    }
+
+    &--active {
+      border-color: $blue-mid;
+    }
+
+    &:not(:last-child) {
+      margin-right: em(25);
+    }
+  }
+
+  &__properties {
+    table {
+      display: grid;
+      border: 1px solid rgba($color: $blue-light, $alpha: 0.2);
+      border-collapse: collapse;
+      max-width: em(520);
+      grid-template-columns:
+        minmax(28%, 1fr)
+        minmax(28%, 1fr)
+        minmax(44%, 1.5fr);
+
+      thead {
+        th {
+          align-items: flex-end;
+          background-color: rgba($color: $blue-light, $alpha: 0.05);
+          border-bottom: 1px solid rgba($color: $blue-light, $alpha: 0.2);
+          color: rgba($color: $grey-font, $alpha: 1);
+          display: flex;
+          font-size: em(16);
+          font-family: $santander-hl-regular;
+          padding: em(14, 16) em(29, 16);
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(even) {
+            td {
+              background-color: rgba($color: $blue-light, $alpha: 0.02);
+            }
+          }
+
+          &:not(:last-child) {
+            td {
+              border-bottom: 1px solid rgba($color: $blue-light, $alpha: 0.05);
+            }
+          }
+        }
+        td {
+          align-items: flex-end;
+          background-color: $white;
+          color: rgba($color: $grey-font, $alpha: 0.8);
+          display: flex;
+          font-family: $santander-tx-regular;
+          font-size: em(12);
+          padding: em(11, 12) em(29, 12);
+        }
+      }
+    }
+
+    thead,
+    tbody,
+    tr {
+      display: contents;
+    }
+  }
 }
