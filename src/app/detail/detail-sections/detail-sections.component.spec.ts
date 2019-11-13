@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailSectionsComponent } from './detail-sections.component';
+import { NavMenuComponent } from 'src/app/shared/components/nav-menu/nav-menu.component';
+import { OverviewComponent } from './overview/overview.component';
+import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 
 describe('DetailSectionsComponent', () => {
   let component: DetailSectionsComponent;
@@ -8,9 +11,8 @@ describe('DetailSectionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailSectionsComponent ]
-    })
-    .compileComponents();
+      declarations: [NavMenuComponent, DetailSectionsComponent, OverviewComponent, SafePipe],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

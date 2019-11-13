@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OverviewComponent } from './overview.component';
+import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 
 describe('OverviewComponent', () => {
   let component: OverviewComponent;
@@ -8,9 +9,8 @@ describe('OverviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OverviewComponent ]
-    })
-    .compileComponents();
+      declarations: [OverviewComponent, SafePipe],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
