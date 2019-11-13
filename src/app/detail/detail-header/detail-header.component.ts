@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Icon } from '@sharedModels/icon';
 
 @Component({
   selector: 'app-detail-header',
@@ -7,9 +6,7 @@ import { Icon } from '@sharedModels/icon';
   styleUrls: ['./detail-header.component.scss'],
 })
 export class DetailHeaderComponent implements OnInit {
-  @Input() icons: Icon[] = [];
-  @Input() icon = '';
-  @Input() title = '';
+  @Input() data: any = {};
 
   constructor() {}
 

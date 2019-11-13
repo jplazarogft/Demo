@@ -1,8 +1,15 @@
 <section class="detail-header">
   <div class="detail-header__title">
-    <h1><span class="icon icon-{{ icon }}"></span>{{ title }}</h1>
+    <h1>
+      <span class="icon icon-{{ icon }}"></span>
+      {{ data?.title }}
+      <span class="tag" *ngFor="let tag of data?.titleTags">{{ tag }}</span>
+    </h1>
   </div>
   <div class="detail-header__icons">
-    <app-icon-group [icons]="icons"></app-icon-group>
+    <app-icon-group [icons]="data?.icons"></app-icon-group>
+  </div>
+  <div class="detail-header__related">
+    <span *ngFor="let item of data?.related">{{ item }}</span>
   </div>
 </section>

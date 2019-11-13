@@ -16,6 +16,30 @@
         font-size: em(24, 32);
         margin-right: em(5, 32);
       }
+
+      &.tag {
+        color: rgba($color: $grey-font, $alpha: 0.8);
+        font-family: $santander-hl-regular;
+        font-size: em(20, 32);
+        margin-left: em(20, 32);
+      }
+    }
+  }
+
+  &__icons {
+    margin-bottom: em(28);
+  }
+
+  &__related {
+    margin-bottom: em(28);
+
+    span {
+      color: rgba($color: $blue, $alpha: 0.85);
+      font-size: em(14);
+
+      &:not(:last-child) {
+        margin-right: em(15);
+      }
     }
   }
 }

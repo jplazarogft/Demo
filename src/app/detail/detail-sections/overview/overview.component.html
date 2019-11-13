@@ -1,18 +1,17 @@
 <section class="overview">
   <h3>Component example</h3>
-  <iframe [src]="url | safe" frameborder="0"></iframe>
+  <section class="overview__editor">
+    <div class="loader" *ngIf="loading">Loading</div>
+    <iframe [src]="referenceUrl | safe" frameborder="0" (load)="iframeLoaded()"></iframe>
+  </section>
   <section class="overview__pagination">
-    <div class="overview__thumb overview__thumb--active">
-      <img src="https://via.placeholder.com/120.png" alt="" />
-    </div>
-    <div class="overview__thumb">
-      <img src="https://via.placeholder.com/120.png" alt="" />
-    </div>
-    <div class="overview__thumb">
-      <img src="https://via.placeholder.com/120.png" alt="" />
-    </div>
-    <div class="overview__thumb">
-      <img src="https://via.placeholder.com/120.png" alt="" />
+    <div
+      class="overview__thumb"
+      [ngClass]="{ 'overview__thumb--active': referenceUrl === reference.url }"
+      *ngFor="let reference of references"
+      (click)="setActiveReference(reference.url)"
+    >
+      <img [src]="reference.thumb" alt="" />
     </div>
   </section>
   <section class="overview__properties" *ngIf="properties?.length > 0">

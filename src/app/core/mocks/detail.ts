@@ -1,35 +1,33 @@
-export const detailData = {
-  header: {
-    title: 'titlecompbutton',
-    titleTags: ['Functional', 'Atom'],
-    description: '',
-    icons: [
-      { class: 'inbox', text: 'Passing' },
-      { class: 'download', text: '17' },
-      { class: 'public', text: 'Public' },
-      { class: 'watch', text: 'Day ago' },
-      { class: 'microsoft', text: '150.510 Mb' },
+export const detailHeader = {
+  title: 'titlecompbutton',
+  titleTags: ['Functional', 'Atom'],
+  description: '',
+  icons: [
+    { class: 'inbox', text: 'Passing' },
+    { class: 'download', text: '17' },
+    { class: 'public', text: 'Public' },
+    { class: 'watch', text: 'Day ago' },
+    { class: 'microsoft', text: '150.510 Mb' },
+  ],
+  related: ['Card', 'Accounts', 'Payments', 'Insurance', 'Loans'],
+  team: {
+    owner: ['alexangarcia'],
+    coowners: ['mariobrown', 'davidbarreiro', 'martaperezgarcia'],
+    collaborators: [
+      'mariobrown',
+      'davidbarreiro',
+      'sergiomartin',
+      'martaperezgarcia',
+      'michaelsans',
     ],
-    related: ['Card', 'Accounts', 'Payments', 'Insurance', 'Loans'],
-    team: {
-      owner: ['alexangarcia'],
-      coowners: ['mariobrown', 'davidbarreiro', 'martaperezgarcia'],
-      collaborators: [
-        'mariobrown',
-        'davidbarreiro',
-        'sergiomartin',
-        'martaperezgarcia',
-        'michaelsans',
-      ],
-    },
-    componentDetail: {
-      access: 'Yesterday',
-      release: 'This month',
-      tests: '11 of 24 detail',
-      coverage: '70%',
-    },
-    analysis: [],
   },
+  componentDetail: {
+    access: 'Yesterday',
+    release: 'This month',
+    tests: '11 of 24 detail',
+    coverage: '70%',
+  },
+  analysis: [],
 };
 
 export const detailSections = {
@@ -73,20 +71,21 @@ export const detailSections = {
     ],
     references: [
       {
-        thumb: 'https://stackblitz.com/edit/embed?embed=1&file=app/app.component.ts',
-        url: 'https://via.placeholder.com/120.png',
+        url: 'https://stackblitz.com/edit/embed?embed=1&file=app/app.component.ts',
+        thumb: 'https://via.placeholder.com/120.png/FFFFFF',
       },
       {
-        thumb: 'https://stackblitz.com/edit/ball-demo?embed=1&file=index.ts',
-        url: 'https://via.placeholder.com/120.png',
+        url: 'https://stackblitz.com/edit/angular-css-host-deep?embed=1&file=app/app.component.ts',
+        thumb: 'https://via.placeholder.com/120.png/FFFFFF',
       },
       {
-        thumb: 'https://stackblitz.com/edit/embed?embed=1&file=app/app.component.ts',
-        url: 'https://via.placeholder.com/120.png',
+        url:
+          'https://stackblitz.com/edit/tympanus-linemenustyles?embed=1&file=app/app.component.ts',
+        thumb: 'https://via.placeholder.com/120.png/FFFFFF',
       },
       {
-        thumb: 'https://stackblitz.com/edit/ball-demo?embed=1&file=index.ts',
-        url: 'https://via.placeholder.com/120.png',
+        url: 'https://stackblitz.com/edit/ball-demo?embed=1&file=index.ts',
+        thumb: 'https://via.placeholder.com/120.png/FFFFFF',
       },
     ],
   },

@@ -7,14 +7,13 @@
   </app-page-menu>
 
   <section class="detail__header">
-    <app-detail-header [icons]="icons" [icon]="iconClass" [title]="title"></app-detail-header>
+    <app-detail-header [data]="headerInfo | async"></app-detail-header>
   </section>
   <section class="detail__body">
     <app-detail-sections
       [sections]="detailMenu"
       [active]="activeDetailMenuOption"
-      [url]="overviewURL"
-      [properties]="properties"
+      [data]="sectionsInfo | async"
       (menuLinkClicked)="updateSectionMenuLink($event)"
     ></app-detail-sections>
   </section>
