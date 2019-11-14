@@ -21,10 +21,10 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{ data?.componentDetail.access }}</td>
-            <td>{{ data?.componentDetail.release }}</td>
-            <td>{{ data?.componentDetail.tests }}</td>
-            <td>{{ data?.componentDetail.coverage }}</td>
+            <td>{{ data?.componentDetail?.access }}</td>
+            <td>{{ data?.componentDetail?.release }}</td>
+            <td>{{ data?.componentDetail?.tests }}</td>
+            <td>{{ data?.componentDetail?.coverage }}</td>
           </tr>
         </tbody>
       </table>
@@ -43,21 +43,21 @@
     <div class="detail-header__related">
       <span *ngFor="let item of data?.related">{{ item }}</span>
     </div>
-    <div class="detail-header__analysis" *ngIf="data?.analysis.length > 0">
+    <div class="detail-header__analysis" *ngIf="data?.analysis?.length > 0">
       Sast analysis <span *ngFor="let item of data.analysis" class="icon {{ item }}"></span>
     </div>
   </article>
   <article>
     <div class="detail-header__team">
-      <div *ngIf="data?.team?.owner.length > 0">
+      <div *ngIf="data?.team?.owner?.length > 0">
         <p>Owner</p>
         <span *ngFor="let item of data?.team?.owner">{{ item }}</span>
       </div>
-      <div *ngIf="data?.team?.coowners.length > 0">
+      <div *ngIf="data?.team?.coowners?.length > 0">
         <p>Co-owners</p>
         <span *ngFor="let item of data?.team?.coowners">{{ item }}</span>
       </div>
-      <div *ngIf="data?.team?.collaborators.length > 0">
+      <div *ngIf="data?.team?.collaborators?.length > 0">
         <p>Collaborators</p>
         <span *ngFor="let item of data?.team?.collaborators">{{ item }}</span>
       </div>
