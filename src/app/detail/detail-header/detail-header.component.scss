@@ -8,10 +8,13 @@
 
   article {
     display: flex;
-    margin-bottom: em(24);
 
     & > div {
       flex: 1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: em(24);
     }
   }
 
@@ -73,9 +76,6 @@
         margin-left: em(20, 32);
       }
     }
-  }
-
-  &__icons {
   }
 
   &__related {
