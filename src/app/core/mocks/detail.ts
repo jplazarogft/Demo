@@ -1,7 +1,8 @@
 export const detailHeader = {
   title: 'titlecompbutton',
   titleTags: ['Functional', 'Atom'],
-  description: '',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus orci odio, accumsan quis gravida at, congue eu ex.',
   icons: [
     { class: 'inbox', text: 'Passing' },
     { class: 'download', text: '17' },
@@ -27,7 +28,7 @@ export const detailHeader = {
     tests: '11 of 24 detail',
     coverage: '70%',
   },
-  analysis: [],
+  analysis: ['icon-codiepie', 'icon-modx', 'icon-first-order', 'icon-gitlab', 'icon-grav'],
 };
 
 export const detailSections = {
