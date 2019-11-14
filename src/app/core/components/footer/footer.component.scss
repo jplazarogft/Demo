@@ -9,22 +9,23 @@
 footer {
   background-color: $blue-dark;
   height: em(70);
+  margin-top: em(35);
   padding: 0 em(40);
 
   section {
     align-items: center;
     display: flex;
     height: 100%;
+
+    &.footer__wrapper {
+      @include wrapper;
+    }
   }
 
   p {
     color: $white;
     font-family: $open-sans;
     font-size: em(12);
-  }
-
-  &__wrapper {
-    @include wrapper;
   }
 }
 

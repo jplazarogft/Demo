@@ -8,7 +8,6 @@ $desktop-big: '1800px';
 
 // Fonts
 $browser-context: 16;
-$verdana: 'Verdana', sans serif;
 
 // Colors
 $alternate-btn: #576c81;
@@ -16,8 +15,10 @@ $black: #000;
 $blue: #24446c;
 $blue-background-btn: #eff6f9;
 $blue-light: #3366ff;
+$blue-mid: #9bc3d3;
 $blue-background-menu: rgba(195, 222, 231, 0.75);
 $blue-dark: #1d252d;
+$chart-pie: rgba(#ef642f, 0.4);
 $grey: #dcdde0;
 $hover: rgba(
   $color: $black,

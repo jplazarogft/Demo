@@ -6,10 +6,10 @@ import { SharedModule } from '../shared/shared.module';
 
 import { HomeComponent } from './home.component';
 import { HomeFiltersComponent } from './home-filters/home-filters.component';
-import { HomeMenuComponent } from './home-menu/home-menu.component';
+import { HomeHeaderComponent } from './home-header/home-header.component';
 
 @NgModule({
-  declarations: [HomeComponent, HomeFiltersComponent, HomeMenuComponent],
+  declarations: [HomeComponent, HomeFiltersComponent, HomeHeaderComponent],
   imports: [CommonModule, HomeRoutingModule, SharedModule, ReactiveFormsModule],
 })
 export class HomeModule {}

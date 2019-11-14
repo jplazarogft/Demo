@@ -8,7 +8,6 @@ table {
   border-collapse: collapse;
   margin-bottom: em(20);
   min-width: 100%;
-  /* These are just initial values which are overriden using JavaScript when a column is resized */
   grid-template-columns:
     minmax(36%, 3fr)
     minmax(8%, 1fr)
@@ -130,7 +129,7 @@ td {
       color: #0aab62;
     }
     &.icon-chart-pie {
-      color: #ef642f;
+      color: $chart-pie;
     }
     &.icon-modx {
       color: #de4251;
