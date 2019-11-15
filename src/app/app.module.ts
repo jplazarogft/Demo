@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { DetailModule } from './detail/detail.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 // Modules
 const imports = [
@@ -23,7 +24,7 @@ const imports = [
 @NgModule({
   declarations: [AppComponent],
   imports,
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

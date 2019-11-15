@@ -7,6 +7,7 @@ import { learnMore } from '@mocks/learn-more';
 import { headerMenu } from '@mocks/menu';
 import { sections } from '@mocks/sections';
 import { Icon } from '@sharedModels/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -21,11 +22,13 @@ export class HomeComponent implements OnInit {
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   updateActiveMenuLink = (option: NavMenuOption) => {
     this.activeHeaderMenuOption = option.label;
+
+    this.router.navigate([option.link]);
   };
 }
