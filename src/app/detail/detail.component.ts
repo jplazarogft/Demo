@@ -21,12 +21,8 @@ export class DetailComponent implements OnInit {
   activeHeaderMenuOption = 'Catalogue';
   headerMenu: NavMenuOption[] = headerMenu;
   detailMenu: NavMenuOption[] = detailMenu;
-  icons: Icon[] = detailIcons;
-  iconClass = 'chart-pie';
   learnMore: LearnMoreIcon[] = learnMore;
-  overviewURL = 'https://stackblitz.com/edit/embed?embed=1&file=app/app.component.ts';
   sections: AditionalContentSection[] = sections;
-  title = 'Android.name.component.button.call';
   sectionsInfo: Observable<any>;
   headerInfo: Observable<any>;
 
