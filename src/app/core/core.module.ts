@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { FooterComponent } from './components/footer/footer.component';
@@ -13,7 +14,7 @@ import { UserService } from '@coreServices/user.service';
 const providers = [ApiService, UserService];
 const components = [FooterComponent, FooterMenuComponent, HeaderComponent];
 
-const imports = [CommonModule];
+const imports = [CommonModule, HttpClientModule];
 
 @NgModule({
   declarations: [...components],
