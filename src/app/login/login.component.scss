@@ -45,12 +45,14 @@
     input {
       font-size: em(24);
       height: em(40, 24);
-      margin-bottom: em(23, 24);
+      margin-bottom: em(30, 24);
       padding: 0 em(10, 24);
       width: em(321, 24);
       & + span {
         color: $main;
-        margin-left: em(10);
+        position: absolute;
+        left: 0;
+        top: em(45);
       }
     }
   }
@@ -61,7 +63,7 @@
     height: em(113);
     justify-content: flex-end;
     border-bottom: 1px solid rgba(111, 119, 121, 0.2);
-    margin-bottom: em(42);
+    margin-bottom: em(96);
     padding-bottom: em(15);
 
     &--panel {
@@ -75,11 +77,10 @@
   }
 
   &__no-account {
-    align-items: flex-end;
     display: flex;
     flex-direction: column;
-    margin-bottom: em(33);
-    padding-right: em(122);
+    margin-bottom: em(85);
+    margin-top: auto;
 
     p {
       color: $grey-dark;
@@ -91,6 +92,8 @@
   }
 
   &__left {
+    display: flex;
+    flex-direction: column;
     width: 58%;
   }
 
@@ -103,26 +106,7 @@
     width: 42%;
   }
 
-  &__trip {
-    color: $main;
-    font-family: $santander-hl-regular;
-    line-height: em(20);
-    margin-bottom: em(62);
-    margin-top: auto;
-    padding-left: em(23);
+  .form-input {
     position: relative;
-    text-transform: uppercase;
-
-    &::after {
-      content: '';
-      border-top: em(10) solid transparent;
-      border-bottom: em(10) solid transparent;
-      border-left: em(15) solid $main;
-      height: 0px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 0px;
-    }
   }
 }
