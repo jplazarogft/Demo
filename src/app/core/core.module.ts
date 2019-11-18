@@ -9,9 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 
 // Services
 import { ApiService } from '@coreServices/api.service';
-import { UserService } from '@coreServices/user.service';
 
-const providers = [ApiService, UserService];
+const providers = [ApiService];
 const components = [FooterComponent, FooterMenuComponent, HeaderComponent];
 
 const imports = [CommonModule, HttpClientModule];
