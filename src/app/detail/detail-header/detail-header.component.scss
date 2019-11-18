@@ -193,8 +193,10 @@
   }
 
   &__description {
-    color: rgba($color: $blue, $alpha: 0.85);
-    font-size: em(14);
-    width: 80%;
+    p {
+      color: rgba($color: $blue, $alpha: 0.85);
+      font-size: em(14);
+      width: 80%;
+    }
   }
 }

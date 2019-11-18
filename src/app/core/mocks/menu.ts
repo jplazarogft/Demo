@@ -20,15 +20,15 @@ export const footerMenu = [
 export const headerMenu = [
   {
     label: 'My Projects',
-    link: '',
+    link: '/home',
   },
   {
     label: 'Catalogue',
-    link: '',
+    link: '/detail',
   },
   {
-    label: 'Support',
-    link: '',
+    label: 'Login',
+    link: '/login',
   },
 ];
 

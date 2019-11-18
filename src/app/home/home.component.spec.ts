@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { AccordionComponent } from '../shared/components/accordion/accordion.component';
 import { AditionalContentComponent } from '../shared/components/aditional-content/aditional-content.component';
@@ -20,6 +21,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         AccordionComponent,
         ActionMenuComponent,
