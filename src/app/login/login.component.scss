@@ -5,54 +5,55 @@
 .login {
   background: $white;
   display: flex;
-  height: em(788);
-  margin-bottom: em(40);
+  height: em(500);
   padding-left: em(25);
+  padding-right: em(25);
   width: 100%;
 
   h1 {
     color: $secondary;
     font-family: $santander-hl-regular;
-    font-size: em(48);
+    font-size: em(36);
   }
 
   h3 {
     color: $blue;
     font-family: $santander-hl-bold;
-    font-size: em(21);
+    font-size: em(15.75);
   }
 
   h4 {
     color: $grey-dark;
     font-family: $santander-hl-regular;
-    font-size: em(26);
-    line-height: em(44, 26);
-    margin-bottom: em(10, 26);
+    font-size: em(19.5);
+    line-height: em(28, 19.5);
+    margin-bottom: em(10, 19.5);
   }
 
   form {
     display: flex;
     flex-direction: column;
     font-family: $open-sans;
-    margin-bottom: em(23);
+    margin-bottom: em(18);
     width: 100%;
 
     button {
       font-family: $santander-hl-bold;
-      font-size: em(24);
+      font-size: em(18);
     }
 
     input {
-      font-size: em(24);
-      height: em(40, 24);
-      margin-bottom: em(30, 24);
-      padding: 0 em(10, 24);
-      width: em(321, 24);
+      font-size: em(18);
+      height: em(40, 18);
+      margin-bottom: em(25, 18);
+      padding: 0 em(10, 18);
+      width: 100%;
       & + span {
         color: $main;
+        font-size: em(12);
         position: absolute;
         left: 0;
-        top: em(45);
+        top: em(45, 12);
       }
     }
   }
@@ -63,7 +64,7 @@
     height: em(113);
     justify-content: flex-end;
     border-bottom: 1px solid rgba(111, 119, 121, 0.2);
-    margin-bottom: em(96);
+    margin-bottom: em(25);
     padding-bottom: em(15);
 
     &--panel {
@@ -72,41 +73,105 @@
   }
 
   &__forgot-password {
-    font-size: em(16);
+    font-size: em(12);
     color: $main;
   }
 
   &__no-account {
     display: flex;
     flex-direction: column;
-    margin-bottom: em(85);
+    margin-bottom: em(25);
     margin-top: auto;
 
     p {
       color: $grey-dark;
       display: inline-block;
       font-family: $santander-hl-regular;
-      font-size: em(20);
-      line-height: em(32, 20);
+      font-size: em(15);
+      line-height: em(32, 15);
     }
+  }
+
+  .form-input {
+    position: relative;
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    width: 58%;
+    width: 100%;
   }
-
   &__right {
     background: url('/assets/images/login_background.png') no-repeat;
     background-size: cover;
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 100%;
-    width: 42%;
   }
 
-  .form-input {
-    position: relative;
+  @include for-tablet-portrait-up {
+    height: em(788);
+    padding-right: 0;
+
+    h1 {
+      font-size: em(48);
+    }
+
+    h3 {
+      font-size: em(21);
+    }
+
+    h4 {
+      font-size: em(26);
+      line-height: em(44, 26);
+      margin-bottom: em(10, 26);
+    }
+
+    form {
+      margin-bottom: em(23);
+
+      button {
+        font-size: em(24);
+      }
+
+      input {
+        font-size: em(24);
+        height: em(40, 24);
+        margin-bottom: em(30, 24);
+        width: em(321, 24);
+
+        & + span {
+          font-size: em(16);
+          top: em(45, 16);
+        }
+      }
+    }
+
+    &__forgot-password {
+      font-size: em(16);
+    }
+
+    &__header {
+      height: em(113);
+      margin-bottom: em(96);
+    }
+
+    &__no-account {
+      margin-bottom: em(85);
+
+      p {
+        font-size: em(20);
+        line-height: em(32, 20);
+      }
+    }
+
+    &__left {
+      width: 58%;
+    }
+
+    &__right {
+      display: flex;
+      width: 42%;
+    }
   }
 }

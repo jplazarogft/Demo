@@ -5,7 +5,7 @@ header {
   background-image: url('/assets/images/header.png');
   border-bottom: 1px solid $main;
   display: flex;
-  height: em(112);
+  height: em(74);
   object-fit: contain;
 
   img {
@@ -42,12 +42,11 @@ header {
     display: flex;
     flex-direction: row;
     height: 100%;
+    padding: 0 em(25);
   }
 
-  ::ng-deep {
-    app-user-feed {
-      height: calc(100% - 1px);
-      margin-left: auto;
-    }
+  @include for-tablet-portrait-up {
+    height: em(112);
+    padding: 0;
   }
 }

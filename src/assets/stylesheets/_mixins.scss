@@ -36,7 +36,10 @@
 @mixin wrapper {
   margin-right: auto;
   margin-left: auto;
-  width: em(1200);
+  width: 100%;
+  @include for-desktop-up() {
+    width: em(1200);
+  }
   @include for-big-desktop-up() {
     width: em($body-width);
   }
