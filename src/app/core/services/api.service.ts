@@ -20,4 +20,10 @@ export class ApiService {
       .get(`${environment.api_url}${path}`, { params })
       .pipe(catchError(this.formatErrors));
   }
+
+  post(path: string, body: object = {}): Observable<any> {
+    return this.http
+      .post(`${environment.api_url}${path}`, JSON.stringify(body))
+      .pipe(catchError(this.formatErrors));
+  }
 }
