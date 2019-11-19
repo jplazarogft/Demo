@@ -7,6 +7,7 @@ header {
   display: flex;
   height: em(74);
   object-fit: contain;
+  padding: 0 em(25);
 
   img {
     height: em(38);
@@ -42,11 +43,10 @@ header {
     display: flex;
     flex-direction: row;
     height: 100%;
-    padding: 0 em(25);
+    padding: 0;
   }
 
   @include for-tablet-portrait-up {
     height: em(112);
-    padding: 0;
   }
 }

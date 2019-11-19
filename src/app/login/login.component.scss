@@ -23,7 +23,7 @@
   }
 
   h4 {
-    color: $grey-dark;
+    color: $blue;
     font-family: $santander-hl-regular;
     font-size: em(19.5);
     line-height: em(28, 19.5);
@@ -141,8 +141,8 @@
         width: em(321, 24);
 
         & + span {
-          font-size: em(16);
-          top: em(45, 16);
+          font-size: em(14);
+          top: em(45, 14);
         }
       }
     }

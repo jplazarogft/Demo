@@ -23,8 +23,8 @@ button,
 
   &:disabled {
     cursor: default;
-    background-color: $grey-disabled;
-    border-color: $grey-disabled-border;
+    background-color: $blue-disabled;
+    border-color: $blue-disabled;
   }
 
   &:focus {
