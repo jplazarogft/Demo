@@ -13,7 +13,7 @@ button,
   font-size: em(16);
   height: em(49, 24);
   transition: 0.3s;
-  width: em(200, 24);
+  width: 100%;
 
   &:hover {
     &:not(:disabled) {
@@ -23,8 +23,8 @@ button,
 
   &:disabled {
     cursor: default;
-    background-color: $grey-disabled;
-    border-color: $grey-disabled-border;
+    background-color: $blue-disabled;
+    border-color: $blue-disabled;
   }
 
   &:focus {
@@ -78,5 +78,9 @@ button,
         background-color: darken($color: $main, $amount: 4%);
       }
     }
+  }
+
+  @include for-tablet-portrait-up {
+    width: em(200, 24);
   }
 }
