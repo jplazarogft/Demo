@@ -5,8 +5,9 @@ header {
   background-image: url('/assets/images/header.png');
   border-bottom: 1px solid $main;
   display: flex;
-  height: em(112);
+  height: em(74);
   object-fit: contain;
+  padding: 0 em(25);
 
   img {
     height: em(38);
@@ -42,6 +43,7 @@ header {
     display: flex;
     flex-direction: row;
     height: 100%;
+    padding: 0;
   }
 
   ::ng-deep {
@@ -49,5 +51,9 @@ header {
       height: calc(100% - 1px);
       margin-left: auto;
     }
+  }
+
+  @include for-tablet-portrait-up {
+    height: em(112);
   }
 }
