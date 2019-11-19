@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { DetailModule } from './detail/detail.module';
 import { HomeModule } from './home/home.module';
-import { LoginModule } from './login/login.module';
 
 // Modules
 const imports = [
@@ -16,7 +15,6 @@ const imports = [
   CoreModule,
   DetailModule,
   HomeModule,
-  LoginModule,
   AppRoutingModule,
 ];
 
