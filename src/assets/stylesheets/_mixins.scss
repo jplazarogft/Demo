@@ -84,10 +84,10 @@
   background: $color1;
   background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
   background: -webkit-gradient(
-      left top,
-      left bottom,
-      color-stop(0%, $color1),
-      color-stop(100%, $color2)
+    left top,
+    left bottom,
+    color-stop(0%, $color1),
+    color-stop(100%, $color2)
   );
   background: -webkit-linear-gradient(top, $color1 0%, $color2 100%);
   background: -o-linear-gradient(top, $color1 0%, $color2 100%);
