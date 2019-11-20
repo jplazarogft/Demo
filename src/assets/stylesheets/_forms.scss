@@ -4,8 +4,8 @@ input,
 textarea,
 select {
   background-color: $white;
-  border: 1px solid transparent;
-  box-shadow: inset 0 0 3px 0 rgba($black, 0.5);
+  border: 1px solid $blue-border;
+  border-radius: 4px;
   color: $grey-dark;
   font-family: $santander-hl-regular;
   height: em(40);
@@ -14,8 +14,7 @@ select {
   width: em(321);
 
   &.error {
-    border: 1px solid $main;
-    box-shadow: inset 0 0 1px 0 rgba($black, 0.1);
+    border-color: $main;
     color: $main;
   }
 
@@ -27,6 +26,5 @@ select {
     outline: none;
     outline-offset: 0;
     border-color: $blue-light;
-    box-shadow: inset 0 0 1px 0 rgba($black, 0.1);
   }
 }
