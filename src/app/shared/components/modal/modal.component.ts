@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
-  providers: [ModalService],
 })
 export class ModalComponent implements OnInit {
   @Input() headerTemplate: TemplateRef<any>;

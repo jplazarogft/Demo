@@ -18,13 +18,17 @@ import { TableComponent } from './components/table/table.component';
 // Pipes
 import { SafePipe } from './pipes/safe.pipe';
 
+import { ModalService } from './components/modal/modal.service';
+
 const components = [
   AccordionComponent,
   ActionMenuComponent,
   AditionalContentComponent,
+  CreateAppModalComponent,
   IconGroupComponent,
   LearnMoreComponent,
   LearnMoreIconComponent,
+  ModalComponent,
   NavMenuComponent,
   PageMenuComponent,
   SearchInputComponent,
@@ -45,9 +49,11 @@ const exports = [
   SearchInputComponent,
   TableComponent,
 ];
+
 @NgModule({
-  declarations: [...components, SafePipe, ModalComponent, CreateAppModalComponent],
+  declarations: [...components, SafePipe],
   imports: [CommonModule],
+  providers: [ModalService],
   exports,
 })
 export class SharedModule {}
