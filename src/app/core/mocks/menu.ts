@@ -27,8 +27,8 @@ export const headerMenu = [
     link: '/detail',
   },
   {
-    label: 'Login',
-    link: '/login',
+    label: 'Support',
+    link: '/support',
   },
 ];
 
