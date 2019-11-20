@@ -1,0 +1,14 @@
+<section class="modal">
+  <section class="modal__wrapper" (click)="sendEvent()"></section>
+  <section class="modal__content">
+    <section class="modal__header">
+      <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+    </section>
+    <section class="modal__body">
+      <ng-container *ngTemplateOutlet="bodyTemplate"></ng-container>
+    </section>
+    <section class="modal__footer">
+      <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+    </section>
+  </section>
+</section>
