@@ -8,11 +8,13 @@ import { headerMenu } from '@mocks/menu';
 import { sections } from '@mocks/sections';
 import { Icon } from '@sharedModels/icon';
 import { Router } from '@angular/router';
+import { ModalService } from '../shared/components/modal/modal.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  providers: [ModalService],
 })
 export class HomeComponent implements OnInit {
   headerMenu: NavMenuOption[] = headerMenu;
@@ -22,13 +24,14 @@ export class HomeComponent implements OnInit {
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private modalService: ModalService) {}
 
   ngOnInit() {}
 
+  showCreateModal = () => this.modalService.toggleVisibility();
+
   updateActiveMenuLink = (option: NavMenuOption) => {
     this.activeHeaderMenuOption = option.label;
-
     this.router.navigate([option.link]);
   };
 }
