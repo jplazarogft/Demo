@@ -2,7 +2,6 @@
 @import 'mixins';
 
 .modal {
-  background-color: rgba($color: $grey, $alpha: 0.95);
   height: 100vh;
   left: 0;
   padding: em(152) 0 em(40);
@@ -18,6 +17,8 @@
     background: $white;
     border-radius: 4px;
     padding: em(40) em(30);
+    position: relative;
+    z-index: 1001;
   }
 
   &__header {
@@ -33,6 +34,16 @@
 
   &__body {
     padding: em(20) 0;
+  }
+
+  &__overlay {
+    background-color: rgba($color: $grey, $alpha: 0.95);
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   &__footer {

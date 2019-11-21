@@ -1,4 +1,4 @@
-<section class="modal" (click)="closeModal()" *ngIf="isVisible | async">
+<section class="modal" *ngIf="isVisible | async">
   <section class="modal__content">
     <section class="modal__header">
       <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
@@ -11,4 +11,5 @@
       <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
     </section>
   </section>
+  <section class="modal__overlay" (click)="closeModal()"></section>
 </section>
