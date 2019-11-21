@@ -11,8 +11,26 @@ export class ModalService {
 
   constructor() {}
 
+  getScrollbarWidth = () => {
+    return window.innerWidth - document.documentElement.clientWidth;
+  };
+
+  /**
+   * blocks scroll and emulates scroll width to prevent tricky behaviours
+   */
+  toggleScroll = () => {
+    const body = document.querySelector('body');
+    if (body) {
+      const styles = this.isVisible
+        ? `overflow:hidden;width:calc(100%-${this.getScrollbarWidth})`
+        : '';
+      body.setAttribute('style', styles);
+    }
+  };
+
   toggleVisibility = () => {
     this.isVisible = !this.isVisible;
+    this.toggleScroll();
     this.visible.next(this.isVisible);
   };
 }
