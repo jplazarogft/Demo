@@ -4,7 +4,8 @@
 .modal {
   height: 100vh;
   left: 0;
-  padding: em(152) 0 em(40);
+  max-height: calc(100vh + #{em(40)});
+  padding-top: em(152);
   position: fixed;
   overflow: auto;
   top: 0;
@@ -38,7 +39,7 @@
 
   &__overlay {
     background-color: rgba($color: $grey, $alpha: 0.95);
-    height: 100vh;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
