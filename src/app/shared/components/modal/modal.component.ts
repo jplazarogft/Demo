@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input, TemplateRef } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 import { ModalService } from './modal.service';
 import { Observable } from 'rxjs';
 
