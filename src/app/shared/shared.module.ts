@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { ActionMenuComponent } from './components/action-menu/action-menu.component';
 import { AditionalContentComponent } from './components/aditional-content/aditional-content.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
-import { CreateAppModalComponent } from './components/create-app-modal/create-app-modal.component';
 import { IconGroupComponent } from './components/icon-group/icon-group.component';
 import { LearnMoreComponent } from './components/learn-more/learn-more.component';
 import { LearnMoreIconComponent } from './components/learn-more/learn-more-icon/learn-more-icon.component';
@@ -24,7 +23,6 @@ const components = [
   AccordionComponent,
   ActionMenuComponent,
   AditionalContentComponent,
-  CreateAppModalComponent,
   IconGroupComponent,
   LearnMoreComponent,
   LearnMoreIconComponent,
@@ -39,7 +37,6 @@ const exports = [
   AccordionComponent,
   ActionMenuComponent,
   AditionalContentComponent,
-  CreateAppModalComponent,
   IconGroupComponent,
   LearnMoreComponent,
   ModalComponent,
