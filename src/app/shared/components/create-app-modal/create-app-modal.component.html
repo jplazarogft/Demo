@@ -1,1 +1,13 @@
-<p>create-app-modal works!</p>
+<ng-template #header>
+  <div class="">
+    <h2>
+      {{ title }}
+    </h2>
+    <app-icon-group [icons]="icons"></app-icon-group>
+  </div>
+</ng-template>
+<ng-template #footer>
+  <button class="btn--blue">Next</button>
+</ng-template>
+
+<app-modal [headerTemplate]="header" [footerTemplate]="footer"></app-modal>
