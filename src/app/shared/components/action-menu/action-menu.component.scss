@@ -2,17 +2,6 @@
 @import 'mixins';
 @import 'fonts';
 
-button {
-  border: none;
-  height: em(22);
-  padding: 0 em(20) 0 em(10);
-  position: relative;
-
-  &:hover {
-    background-color: $hover;
-  }
-}
-
 .action-menu {
   @include box-shadow;
   align-items: center;
@@ -22,6 +11,13 @@ button {
   button {
     border: none;
     border-radius: 0;
+    height: em(22);
+    padding: 0 em(20) 0 em(10);
+    position: relative;
+
+    &:hover {
+      background-color: $hover;
+    }
   }
 
   &__btns {
@@ -35,8 +31,6 @@ button {
       display: flex;
       font-family: $open-sans;
       height: 100%;
-      padding: 0 em(20) 0 em(10);
-      position: relative;
       width: auto;
 
       img {
