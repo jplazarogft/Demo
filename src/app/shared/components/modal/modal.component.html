@@ -1,4 +1,4 @@
-<section class="modal" (click)="sendEvent()" *ngIf="isVisible | async">
+<section class="modal" (click)="closeModal()" *ngIf="isVisible | async">
   <section class="modal__content">
     <section class="modal__header">
       <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>

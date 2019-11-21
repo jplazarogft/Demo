@@ -11,7 +11,6 @@ export class ModalComponent implements OnInit {
   @Input() headerTemplate: TemplateRef<any>;
   @Input() bodyTemplate: TemplateRef<any>;
   @Input() footerTemplate: TemplateRef<any>;
-  @Output() wrapperClick = new EventEmitter<boolean>();
 
   isVisible = new Observable<boolean>();
 
@@ -22,6 +21,4 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal = () => this.modalService.toggleVisibility();
-
-  sendEvent = () => this.wrapperClick.emit(true);
 }
