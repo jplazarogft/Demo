@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+.modal {
+  background-color: rgba($color: $grey, $alpha: 0.95);
+  height: 100vh;
+  left: 0;
+  padding: em(152) 0 em(40);
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &__content {
+    @include box-shadow;
+    @include wrapper;
+    background: $white;
+    border-radius: 4px;
+    padding: em(40) em(30);
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__close-btn {
+    font-size: em(12);
+    height: em(27, 12);
+    margin-left: auto;
+    width: em(75, 12);
+  }
+
+  &__body {
+    padding: em(20) 0;
+  }
+
+  &__footer {
+    padding-top: em(20);
+  }
+}
