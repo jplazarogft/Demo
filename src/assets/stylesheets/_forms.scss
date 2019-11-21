@@ -28,3 +28,11 @@ select {
     border-color: $blue-light;
   }
 }
+
+label {
+  color: $blue-label;
+  display: block;
+  font-family: $santander-hl-regular;
+  font-size: em(21);
+  line-height: em(35, 21);
+}
