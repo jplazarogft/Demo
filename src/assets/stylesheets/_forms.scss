@@ -8,10 +8,11 @@ select {
   border-radius: 4px;
   color: $grey-dark;
   font-family: $santander-hl-regular;
-  height: em(40);
-  margin-bottom: em(15);
-  padding: 0 em(10);
-  width: em(321);
+  font-size: em(20);
+  height: em(40, 20);
+  margin-bottom: em(15, 20);
+  padding: 0 em(10, 20);
+  width: em(321, 20);
 
   &.error {
     border-color: $main;
