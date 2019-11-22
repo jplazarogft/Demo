@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { FooterComponent } from './components/footer/footer.component';
@@ -15,6 +16,9 @@ import { UserService } from '@coreServices/user.service';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
+import { MockModule } from '@mocks/mock.module';
+
+import { environment } from './../../environments/environment';
 
 const providers = [ApiService, UserService];
 const components = [
@@ -26,7 +30,9 @@ const components = [
   UserFeedTagComponent,
 ];
 
-const imports = [CommonModule, SharedModule];
+const extraModules = environment.mockApi ? [MockModule] : [];
+
+const imports = [CommonModule, HttpClientModule, SharedModule, ...extraModules];
 
 @NgModule({
   declarations: [...components],
