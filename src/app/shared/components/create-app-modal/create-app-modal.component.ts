@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Icon } from '@sharedModels/icon';
 import { homeIcons } from '@mocks/icons';
 
@@ -10,7 +11,19 @@ import { homeIcons } from '@mocks/icons';
 export class CreateAppModalComponent implements OnInit {
   icons: Icon[] = homeIcons;
   title = 'Create application';
-  constructor() {}
+  appForm: FormGroup;
 
-  ngOnInit() {}
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.appForm = this.formBuilder.group({
+      projectName: ['', Validators.required],
+      projectDescription: ['', Validators.required],
+      projectType: [''],
+      id: ['', Validators.required],
+      urlImage: [''],
+      projectDependecies: [[]],
+      projectTechnologies: [[]],
+    });
+  }
 }

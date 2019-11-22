@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Components
 import { ActionMenuComponent } from './components/action-menu/action-menu.component';
@@ -52,7 +53,7 @@ const exports = [
 
 @NgModule({
   declarations: [...components, SafePipe],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   providers: [ModalService],
   exports,
 })

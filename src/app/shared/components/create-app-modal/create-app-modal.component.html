@@ -6,8 +6,18 @@
     <app-icon-group [icons]="icons"></app-icon-group>
   </div>
 </ng-template>
+<ng-template #body>
+  <form [formGroup]="appForm">
+    <label for="projectName">Name:</label>
+    <input type="text" name="projectName" formControlName="projectName" />
+    <label for="projectDescription">Name application:</label>
+    <input type="text" name="projectDescription" formControlName="projectDescription" />
+    <label for="id">Identification:</label>
+    <input type="text" name="id" formControlName="id" />
+  </form>
+</ng-template>
 <ng-template #footer>
   <button class="btn--blue">Next</button>
 </ng-template>
 
-<app-modal [headerTemplate]="header" [footerTemplate]="footer"></app-modal>
+<app-modal [headerTemplate]="header" [bodyTemplate]="body" [footerTemplate]="footer"></app-modal>
