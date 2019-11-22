@@ -16,5 +16,5 @@
     <app-aditional-content [sections]="sections"></app-aditional-content>
     <app-learn-more [content]="learnMore"></app-learn-more>
   </section>
-  <app-create-app-modal></app-create-app-modal>
+  <app-create-app-modal [technologies]="technologies$ | async"></app-create-app-modal>
 </section>

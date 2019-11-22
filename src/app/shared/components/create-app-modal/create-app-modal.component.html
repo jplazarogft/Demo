@@ -3,16 +3,18 @@
     <h2>
       {{ title }}
     </h2>
-    <app-icon-group [icons]="icons"></app-icon-group>
   </div>
 </ng-template>
 <ng-template #body>
   <form [formGroup]="appForm">
-    <div class="input-group" *ngIf="technology">
-      <label for="">Platform</label>
-      <label for="" *ngFor="let technology of technologies | async">
-        <input type="checkbox" name="technologies" value="{{ technology.technologyId }}" />
-        {{ technology.technologyId }}
+    <div class="input-group" *ngIf="technologies">
+      <label for="">Platform:</label>
+      <label
+        *ngFor="let technology of technologies; let i = index"
+        formArrayName="projectTechnologies"
+      >
+        <input type="checkbox" [formControlName]="i" />
+        {{ technology.technologyName }}
       </label>
     </div>
     <label for="projectName">Name:</label>
@@ -24,7 +26,7 @@
   </form>
 </ng-template>
 <ng-template #footer>
-  <button class="btn--blue">Next</button>
+  <button class="btn--blue" (click)="submitForm()">Next</button>
 </ng-template>
 
 <app-modal [headerTemplate]="header" [bodyTemplate]="body" [footerTemplate]="footer"></app-modal>

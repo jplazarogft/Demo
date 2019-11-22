@@ -1,3 +1,5 @@
+import { HomeService } from './home.service';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { AditionalContentSection } from '@sharedModels/aditional-content-section';
 import { LearnMoreIcon } from '@sharedModels/learn-more-icon';
@@ -9,6 +11,7 @@ import { sections } from '@mocks/sections';
 import { Icon } from '@sharedModels/icon';
 import { Router } from '@angular/router';
 import { ModalService } from '../shared/components/modal/modal.service';
+import { Technology } from '@coreModels/technology';
 
 @Component({
   selector: 'app-home',
@@ -23,10 +26,17 @@ export class HomeComponent implements OnInit {
   learnMore: LearnMoreIcon[] = learnMore;
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
+  technologies$: Observable<Technology> = null;
 
-  constructor(private router: Router, private modalService: ModalService) {}
+  constructor(
+    private router: Router,
+    private modalService: ModalService,
+    private homeService: HomeService,
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.technologies$ = this.homeService.getTechnologies();
+  }
 
   showCreateModal = () => this.modalService.toggleVisibility();
 

@@ -18,6 +18,16 @@ button {
 
 form {
   input {
-    width: em(501);
+    &:not([type='checkbox']) {
+      width: em(501);
+    }
+
+    &[type='checkbox'] {
+      margin-left: em(15);
+    }
+  }
+
+  .input-group {
+    display: flex;
   }
 }

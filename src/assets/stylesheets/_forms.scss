@@ -3,30 +3,32 @@
 input,
 textarea,
 select {
-  background-color: $white;
-  border: 1px solid $blue-border;
-  border-radius: 4px;
-  color: $grey-dark;
-  font-family: $santander-hl-regular;
-  font-size: em(20);
-  height: em(40, 20);
-  margin-bottom: em(15, 20);
-  padding: 0 em(10, 20);
-  width: em(321, 20);
+  &:not([type='checkbox']) {
+    background-color: $white;
+    border: 1px solid $blue-border;
+    border-radius: 4px;
+    color: $grey-dark;
+    font-family: $santander-hl-regular;
+    font-size: em(20);
+    height: em(40, 20);
+    margin-bottom: em(15, 20);
+    padding: 0 em(10, 20);
+    width: em(321, 20);
 
-  &.error {
-    border-color: $main;
-    color: $main;
-  }
+    &.error {
+      border-color: $main;
+      color: $main;
+    }
 
-  &::placeholder {
-    color: rgba($black, 0.3);
-  }
+    &::placeholder {
+      color: rgba($black, 0.3);
+    }
 
-  &:focus {
-    outline: none;
-    outline-offset: 0;
-    border-color: $blue-light;
+    &:focus {
+      outline: none;
+      outline-offset: 0;
+      border-color: $blue-light;
+    }
   }
 }
 
