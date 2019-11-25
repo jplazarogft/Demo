@@ -41,6 +41,16 @@ label {
 }
 
 .image-sample {
+  align-items: center;
   cursor: pointer;
+  display: inline-flex;
+
+  &:not(:first-of-type) {
+    margin-left: em(19);
+  }
+}
+
+.form-group {
   display: flex;
+  margin-bottom: em(15);
 }
