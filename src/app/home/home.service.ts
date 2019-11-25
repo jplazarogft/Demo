@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { ApiService } from '@coreServices/api.service';
 import { Technology } from '@coreModels/technology';
 import { environment } from '../../environments/environment';
-import { NavigationTypes } from './../core/enums/navigation-type';
+import { NavigationTypes } from '../core/enums/navigation-type.enum';
 
 @Injectable({
   providedIn: 'root',
