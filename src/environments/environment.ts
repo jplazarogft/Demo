@@ -8,6 +8,8 @@ export const environment = {
   mockApi: true,
   technologiesApi: `${baseApi}technologies`,
   imagesApi: `${baseApi}images`,
+  projectApi: `${baseApi}project`,
+  dependenciesApi: `${baseApi}project`,
 };
 
 /*

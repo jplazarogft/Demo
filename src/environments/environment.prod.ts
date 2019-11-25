@@ -5,4 +5,6 @@ export const environment = {
   mockApi: false,
   technologiesApi: `${baseApi}technologies`,
   imagesApi: `${baseApi}images`,
+  projectApi: `${baseApi}project`,
+  dependenciesApi: `${baseApi}project`,
 };
