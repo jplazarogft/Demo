@@ -18,7 +18,7 @@ button {
 
 form {
   input {
-    &:not([type='checkbox']) {
+    &:not([type='checkbox']):not([type='radio']) {
       width: em(501);
     }
 

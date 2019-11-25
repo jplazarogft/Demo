@@ -14,4 +14,9 @@ export class HomeService {
     const { technologies } = environment;
     return this.apiService.get(technologies);
   }
+
+  getImages(): Observable<string[]> {
+    const { images } = environment;
+    return this.apiService.get(images);
+  }
 }

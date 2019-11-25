@@ -6,6 +6,9 @@ export default {
     'http://localhost:4200/technologies': {
       handler: getTechnologies,
     },
+    'http://localhost:4200/images': {
+      handler: getImages,
+    },
   },
 };
 
@@ -23,6 +26,15 @@ function getTechnologies() {
           technologyName: 'Ios',
         },
       ],
+    }),
+  );
+}
+
+function getImages() {
+  return of(
+    new HttpResponse({
+      status: 200,
+      body: ['ICO red', 'ICO black', 'ICO small', 'ICO big'],
     }),
   );
 }

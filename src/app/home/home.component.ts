@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
   technologies$: Observable<Technology> = null;
+  images$: Observable<string[]> = null;
 
   constructor(
     private router: Router,
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.technologies$ = this.homeService.getTechnologies();
+    this.images$ = this.homeService.getImages();
   }
 
   showCreateModal = () => this.modalService.toggleVisibility();

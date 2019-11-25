@@ -23,10 +23,15 @@
     <input type="text" name="projectDescription" formControlName="projectDescription" />
     <label for="id">Identification:</label>
     <input type="text" name="id" formControlName="id" />
+    <label for="">App Icon:</label>
+    <label for="" *ngFor="let image of images" class="image-sample" (click)="selectImage(image)">
+      <input type="radio" name="urlImage" formControlName="urlImage" value="{{ image }}" />
+      {{ image }}
+    </label>
   </form>
 </ng-template>
 <ng-template #footer>
-  <button class="btn--blue" (click)="submitForm()">Next</button>
+  <button class="btn--blue" (click)="submitForm()">Generate</button>
 </ng-template>
 
 <app-modal [headerTemplate]="header" [bodyTemplate]="body" [footerTemplate]="footer"></app-modal>

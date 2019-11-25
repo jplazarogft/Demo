@@ -3,7 +3,7 @@
 input,
 textarea,
 select {
-  &:not([type='checkbox']) {
+  &:not([type='checkbox']):not([type='radio']) {
     background-color: $white;
     border: 1px solid $blue-border;
     border-radius: 4px;
@@ -38,4 +38,9 @@ label {
   font-family: $santander-hl-regular;
   font-size: em(21);
   line-height: em(35, 21);
+}
+
+.image-sample {
+  cursor: pointer;
+  display: flex;
 }

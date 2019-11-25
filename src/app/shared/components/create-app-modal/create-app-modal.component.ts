@@ -9,6 +9,7 @@ import { Technology } from '@coreModels/technology';
 })
 export class CreateAppModalComponent implements OnInit, OnChanges {
   @Input() technologies: Technology[] = null;
+  @Input() images: string[] = null;
 
   title = 'Create application';
   appForm: FormGroup;
@@ -20,6 +21,11 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
     if (technologies.currentValue && technologies.currentValue.length > 0) {
       // this.appForm.addControl('projectTechnologies', new FormArray(this.technologiesFBArray));
     }
+  }
+
+  get projectTechnologies() {
+    const { projectTechnologies } = this.appForm.value;
+    return this.technologies.filter((technology, index) => projectTechnologies[index]);
   }
 
   ngOnInit() {
@@ -38,7 +44,7 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
   }
 
   submitForm = () => {
-    console.log(this.appForm);
+    const tech = this.projectTechnologies;
     debugger;
   };
 }
