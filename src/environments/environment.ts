@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   api_url: '',
   mockApi: true,
-  technologies: `${baseApi}technologies`,
-  images: `${baseApi}images`,
+  technologiesApi: `${baseApi}technologies`,
+  imagesApi: `${baseApi}images`,
 };
 
 /*

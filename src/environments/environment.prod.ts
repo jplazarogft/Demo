@@ -3,5 +3,6 @@ export const environment = {
   production: false,
   api_url: '',
   mockApi: false,
-  technologies: `${baseApi}technologies`,
+  technologiesApi: `${baseApi}technologies`,
+  imagesApi: `${baseApi}images`,
 };
