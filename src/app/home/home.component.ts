@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
   title = 'My Projects';
   technologies$: Observable<Technology> = null;
   images$: Observable<string[]> = null;
+  navigationTypes: string[] = [];
 
   constructor(
     private router: Router,
@@ -38,9 +39,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.technologies$ = this.homeService.getTechnologies();
     this.images$ = this.homeService.getImages();
+    this.navigationTypes = this.homeService.navigationTypes;
   }
 
   showCreateModal = () => this.modalService.toggleVisibility();
+
+  submitCreateAppForm = form =>
+    this.homeService.sendForm(form).subscribe(
+      response => alert(response),
+      error => alert(error.msg),
+    );
 
   updateActiveMenuLink = (option: NavMenuOption) => {
     this.activeHeaderMenuOption = option.label;
