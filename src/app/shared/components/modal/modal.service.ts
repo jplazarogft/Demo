@@ -21,9 +21,7 @@ export class ModalService {
   toggleScroll = () => {
     const body = document.querySelector('body');
     if (body) {
-      const styles = this.isVisible
-        ? `overflow:hidden;width:calc(100% - ${this.getScrollbarWidth()}px)`
-        : '';
+      const styles = this.isVisible ? `overflow:hidden;width:calc(100%)` : '';
       body.setAttribute('style', styles);
     }
   };
