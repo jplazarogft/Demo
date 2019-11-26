@@ -12,6 +12,7 @@ import { Icon } from '@sharedModels/icon';
 import { Router } from '@angular/router';
 import { ModalService } from '../shared/components/modal/modal.service';
 import { Technology } from '@coreModels/technology';
+import { Project } from '@coreModels/project';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,8 @@ export class HomeComponent implements OnInit {
   learnMore: LearnMoreIcon[] = learnMore;
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
-  technologies$: Observable<Technology> = null;
+  dependencies$: Observable<Project[]> = null;
+  technologies$: Observable<Technology[]> = null;
   images$: Observable<string[]> = null;
   navigationTypes: string[] = [];
 
@@ -39,15 +41,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.technologies$ = this.homeService.getTechnologies();
     this.images$ = this.homeService.getImages();
+    this.dependencies$ = this.homeService.getApplicationDependencies();
     this.navigationTypes = this.homeService.navigationTypes;
   }
 
   showCreateModal = () => this.modalService.toggleVisibility();
 
-  submitCreateAppForm = form =>
+  submitCreateAppForm = (form: Project) =>
     this.homeService.sendForm(form).subscribe(
       response => alert(response),
-      error => alert(error.msg),
+      error => alert(`Something went wrong: ${error.msg}`),
     );
 
   updateActiveMenuLink = (option: NavMenuOption) => {

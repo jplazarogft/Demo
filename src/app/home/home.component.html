@@ -17,8 +17,10 @@
     <app-learn-more [content]="learnMore"></app-learn-more>
   </section>
   <app-create-app-modal
-    [technologies]="technologies$ | async"
+    [dependencies]="dependencies$ | async"
     [images]="images$ | async"
+    [technologies]="technologies$ | async"
     [navigationTypes]="navigationTypes"
+    (submitClick)="submitCreateAppForm($event)"
   ></app-create-app-modal>
 </section>

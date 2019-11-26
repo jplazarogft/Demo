@@ -25,7 +25,7 @@
     <input type="text" name="id" formControlName="id" />
     <label for="">App Icon:</label>
     <div class="form-group">
-      <label for="" *ngFor="let image of images" class="image-sample" (click)="selectImage(image)">
+      <label for="" *ngFor="let image of images" class="image-sample" (click)="setImage(image)">
         <input type="radio" name="urlImage" formControlName="urlImage" value="{{ image }}" />
         {{ image }}
       </label>
@@ -36,7 +36,7 @@
         for=""
         class="image-sample"
         *ngFor="let navType of navigationTypes"
-        (click)="selectNavType(navType.type)"
+        (click)="setNavType(navType.type)"
       >
         <input
           type="radio"
@@ -46,6 +46,18 @@
         />
         {{ navType.label }}
       </label>
+    </div>
+    <label for="">Components</label>
+    <div class="" *ngIf="dependencies">
+      <app-accordion [title]="'Technical/Functional'">
+        <label
+          *ngFor="let dependency of dependencies; let i = index"
+          formArrayName="projectDependencies"
+        >
+          <input type="checkbox" [formControlName]="i" />
+          {{ dependency.projectName }}
+        </label>
+      </app-accordion>
     </div>
   </form>
 </ng-template>
