@@ -2,6 +2,7 @@
 @import 'mixins';
 
 .modal {
+  background-color: rgba($color: $blue-label, $alpha: 0.6);
   height: 100vh;
   left: 0;
   max-height: calc(100vh + #{em(40)});
@@ -38,7 +39,6 @@
   }
 
   &__overlay {
-    background-color: rgba($color: $blue-label, $alpha: 0.6);
     height: 100%;
     left: 0;
     position: absolute;
