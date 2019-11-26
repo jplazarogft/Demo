@@ -1,10 +1,12 @@
-import { Project } from './../core/models/project';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 import { ApiService } from '@coreServices/api.service';
 import { Technology } from '@coreModels/technology';
-import { environment } from '../../environments/environment';
-import { NavigationTypes } from '../core/enums/navigation-type.enum';
+import { NavigationTypes } from '@coreEnums/navigation-type.enum';
+import { ProjectType } from '@coreEnums/project.enum';
+import { Project } from '@coreModels/project';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +17,14 @@ export class HomeService {
   getDependencies(): Observable<Project[]> {
     const { dependenciesApi } = environment;
     return this.apiService.get(dependenciesApi);
+  }
+
+  getApplicationDependencies(): Observable<Project[]> {
+    return this.getDependencies().pipe(
+      map(dependencies =>
+        dependencies.filter(dependency => dependency.projectTypeName === ProjectType.Component),
+      ),
+    );
   }
 
   getTechnologies(): Observable<Technology[]> {

@@ -1,6 +1,6 @@
 export enum ProjectType {
-  Application = 'Application',
-  Component = 'Component',
+  Application = 'Applications',
+  Component = 'Components',
   Test = 'Test',
 }
 

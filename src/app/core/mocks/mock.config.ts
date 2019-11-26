@@ -366,7 +366,9 @@ function getDependencies() {
           projectProperties: [],
           projectDependencies: [],
         },
-      ],
+      ].filter(dependency => {
+        return dependency.projectTypeId === 2;
+      }),
     }),
   );
 }

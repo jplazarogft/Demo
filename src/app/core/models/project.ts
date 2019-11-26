@@ -2,13 +2,15 @@ import { Update } from './update';
 import { Artifact } from './artifact';
 import { Granularity } from '@coreEnums/granularity.enum';
 import { ProjectScope, ProjectFunctionalArea } from '@coreEnums/project.enum';
+import { ProjectType } from '@coreEnums/project.enum';
 import { UserScope } from '@coreEnums/user-scope.enum';
 import { Technology } from '@coreModels/technology';
 
 export interface Project {
   projectName: string;
   projectDescription: string;
-  projectType: string;
+  projectTypeId: number;
+  projectTypeName: ProjectType;
   urlImage: string;
   projectTechonologies: Technology[];
   projectDependencies: Project[];
