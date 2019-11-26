@@ -1,3 +1,4 @@
+import { Project } from './../core/models/project';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiService } from '@coreServices/api.service';
@@ -11,7 +12,12 @@ import { NavigationTypes } from '../core/enums/navigation-type.enum';
 export class HomeService {
   constructor(private apiService: ApiService) {}
 
-  getTechnologies(): Observable<Technology> {
+  getDependencies(): Observable<Project[]> {
+    const { dependenciesApi } = environment;
+    return this.apiService.get(dependenciesApi);
+  }
+
+  getTechnologies(): Observable<Technology[]> {
     const { technologiesApi } = environment;
     return this.apiService.get(technologiesApi);
   }
@@ -28,7 +34,7 @@ export class HomeService {
     }));
   }
 
-  sendForm(form): Observable<any> {
+  sendForm(form: Project): Observable<any> {
     const { projectApi } = environment;
     return this.apiService.post(projectApi, form);
   }
