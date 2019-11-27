@@ -108,8 +108,7 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
 
   submitForm = () => {
     const formData = this.projectData;
-    debugger;
-    // this.submitClick.emit(formData);
+    this.submitClick.emit(formData);
     this.appForm.reset();
   };
 }
