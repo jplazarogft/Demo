@@ -12,21 +12,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let x of [1, 2, 3, 4, 5, 6, 7]">
+    <tr *ngFor="let dependency of dependencies">
       <td><svg-icon src="/assets/images/01_icon_comp_android.svg"></svg-icon></td>
       <td>
         <div class="row">
-          <div class="name">login</div>
-          <div class="type">Functional</div>
+          <div class="name">{{ dependency.projectName }}</div>
+          <div class="type">{{ dependency.projectScopeName }}</div>
         </div>
       </td>
       <td>
-        <div class="description block-with-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum euismod nisl.
-          Suspendisse potenti. Quisque semper tellus in neque venenatis imperdiet. Quisque nec risus
-          nulla. Phasellus fermentum lacinia purus, consequat molestie turpis pretium convallis. Sed
-          gravida, orci nec cursus malesuada, quam diam tincidunt orci, sed porttitor lacus ex
-        </div>
+        <div class="description block-with-text">{{ dependency.projectDescription }}</div>
         <div class="tags">
           <span>Button</span> <span>Global</span><span>Component</span><span>Android</span
           ><span>Active</span>

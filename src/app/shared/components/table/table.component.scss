@@ -9,11 +9,11 @@ table {
   margin-bottom: em(20);
   min-width: 100%;
   grid-template-columns:
-    minmax(8%, 1fr)
-    minmax(8%, 1fr)
+    minmax(6%, 1fr)
+    minmax(12%, 1fr)
     minmax(34%, 2fr)
     minmax(8%, 1fr)
-    minmax(12%, 1fr)
+    minmax(10%, 1fr)
     minmax(10%, 1fr)
     minmax(8%, 1fr)
     minmax(12%, 1fr);
@@ -175,14 +175,16 @@ td {
 
   .name {
     font-family: $santander-tx-bold;
-    padding: 5px;
     color: #333333;
-    font-size: 18px;
+    font-size: 1.4em;
     font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
   }
 
   .type {
-    padding: 5px;
+    margin-top: 5px;
     color: #b2b5b7;
     font-size: 16px;
   }
