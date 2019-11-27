@@ -38,15 +38,6 @@
     padding: em(20) 0;
   }
 
-  &__overlay {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
   &__footer {
     padding-top: em(20);
   }
