@@ -9,13 +9,10 @@ export default {
     'http://localhost:4200/images': {
       handler: getImages,
     },
-    'http://172.21.12.108:8085/globileHub/projects': {
-      handler: getDependencies,
-    },
   },
 };
 
-function getDependencies() {
+function getAppDependencies() {
   return of(
     new HttpResponse({
       status: 200,
