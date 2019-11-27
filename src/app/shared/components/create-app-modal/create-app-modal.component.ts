@@ -89,6 +89,8 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
       projectDependencies: this.projectDependencies,
       creator: {
         userId: 2,
+        userName: 'Yensi',
+        userEmail: 'yino@gft.com',
       },
       projectTypeId: 1,
       functionalAreaId: 1,
