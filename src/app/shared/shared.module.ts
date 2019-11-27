@@ -13,6 +13,8 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { PageMenuComponent } from './components/page-menu/page-menu.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { TableComponent } from './components/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 // Pipes
 import { SafePipe } from './pipes/safe.pipe';
@@ -45,11 +47,12 @@ const exports = [
   SafePipe,
   SearchInputComponent,
   TableComponent,
+  AngularSvgIconModule,
 ];
 
 @NgModule({
   declarations: [...components, SafePipe],
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule, AngularSvgIconModule],
   providers: [ModalService],
   exports,
 })
