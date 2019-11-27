@@ -102,10 +102,6 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
 
   resetForm = () => {};
 
-  setImage = (image: string) => this.appForm.controls.urlImage.setValue(image);
-
-  setNavType = (navType: string) => this.appForm.controls.navigationType.setValue(navType);
-
   submitForm = () => {
     const formData = this.projectData;
     this.submitClick.emit(formData);
