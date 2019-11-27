@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   learnMore: LearnMoreIcon[] = learnMore;
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
-  dependencies$: Observable<Project[]> = null;
+  appDependencies$: Observable<Project[]> = null;
   technologies$: Observable<Technology[]> = null;
   images$: Observable<string[]> = null;
   navigationTypes: string[] = [];
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.technologies$ = this.homeService.getTechnologies();
     this.images$ = this.homeService.getImages();
-    this.dependencies$ = this.homeService.getApplicationDependencies();
+    this.appDependencies$ = this.homeService.getApplicationDependencies();
     this.navigationTypes = this.homeService.navigationTypes;
   }
 

@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  SimpleChanges,
+  OnChanges,
+} from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, Validators, FormControl } from '@angular/forms';
 import { Technology } from '@coreModels/technology';
 import { Project } from '@coreModels/project';
@@ -9,7 +17,7 @@ import { ProjectType } from '@coreEnums/project.enum';
   templateUrl: './create-app-modal.component.html',
   styleUrls: ['./create-app-modal.component.scss'],
 })
-export class CreateAppModalComponent implements OnInit {
+export class CreateAppModalComponent implements OnInit, OnChanges {
   @Input() dependencies: Project[] = null;
   @Input() images: string[] = null;
   @Input() navigationTypes: any = null;
@@ -26,14 +34,27 @@ export class CreateAppModalComponent implements OnInit {
     this.appForm = this.formBuilder.group({
       projectName: ['', Validators.required],
       projectDescription: ['', Validators.required],
-      projectTypeId: [1], // value fixed, we are generating an app
       projectTypeName: [ProjectType.Application], // value fixed, we are generating an app
       id: ['', Validators.required],
       urlImage: [''],
       projectTechnologies: new FormArray(this.technologiesFBArray),
-      projectDependencies: new FormArray(this.dependenciesArray),
       navigationType: [''],
+      projectTypeId: [1], // fixed value, we are generating an app
+      functionalAreaId: [1], // fixed value
+      brandId: [1], // fixed value
+      projectScopeId: [1], // fixed value
     });
+  }
+
+  /**
+   * add form controls dinamically when receiving input values
+   * @param changes
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    const { dependencies } = changes;
+    if (dependencies.currentValue && dependencies.currentValue.length > 0) {
+      this.appForm.addControl('projectDependencies', new FormArray(this.dependenciesArray));
+    }
   }
 
   get projectDependencies() {
