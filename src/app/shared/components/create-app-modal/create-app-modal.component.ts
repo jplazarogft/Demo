@@ -39,10 +39,6 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
       urlImage: [''],
       projectTechnologies: new FormArray(this.technologiesFBArray),
       navigationType: [''],
-      projectTypeId: [1], // fixed value, we are generating an app
-      functionalAreaId: [1], // fixed value
-      brandId: [1], // fixed value
-      projectScopeId: [1], // fixed value
     });
   }
 
@@ -79,7 +75,6 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
     const {
       projectName,
       projectDescription,
-      projectTypeId,
       projectTypeName,
       urlImage,
       navigationType,
@@ -87,12 +82,18 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
     return {
       projectName,
       projectDescription,
-      projectTypeId,
       projectTypeName,
       urlImage,
       navigationType,
       projectTechonologies: this.projectTechnologies,
       projectDependencies: this.projectDependencies,
+      creator: {
+        userId: 2,
+      },
+      projectTypeId: 1,
+      functionalAreaId: 1,
+      brandId: 1,
+      projectScopeId: 1,
     };
   }
 
