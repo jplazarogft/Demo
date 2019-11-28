@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Project } from '@coreModels/project';
 
 @Component({
   selector: 'app-table',
