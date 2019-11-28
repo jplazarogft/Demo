@@ -17,6 +17,7 @@ import { NavMenuComponent } from '../shared/components/nav-menu/nav-menu.compone
 import { PageMenuComponent } from '../shared/components/page-menu/page-menu.component';
 import { SearchInputComponent } from '../shared/components/search-input/search-input.component';
 import { TableComponent } from '../shared/components/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -24,7 +25,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, ReactiveFormsModule],
+      imports: [RouterTestingModule, ReactiveFormsModule, HttpClientModule],
       declarations: [
         AccordionComponent,
         ActionMenuComponent,

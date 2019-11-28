@@ -12,7 +12,7 @@ export interface Project {
   projectTypeId: number;
   projectTypeName: ProjectType;
   urlImage: string;
-  projectTechonologies: Technology[];
+  projectTechnologies: Technology[];
   projectDependencies: Project[];
   projectId?: string;
   urlSample?: string;

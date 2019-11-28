@@ -85,7 +85,7 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
       projectTypeName,
       urlImage,
       navigationType,
-      projectTechonologies: this.projectTechnologies,
+      projectTechnologies: this.projectTechnologies,
       projectDependencies: this.projectDependencies,
       creator: {
         userId: 2,
@@ -99,12 +99,11 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
     };
   }
 
-  setImage = (image: string) => this.appForm.controls.urlImage.setValue(image);
-
-  setNavType = (navType: string) => this.appForm.controls.navigationType.setValue(navType);
+  resetForm = () => {};
 
   submitForm = () => {
     const formData = this.projectData;
     this.submitClick.emit(formData);
+    this.appForm.reset();
   };
 }

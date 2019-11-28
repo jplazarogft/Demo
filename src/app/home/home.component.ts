@@ -49,7 +49,10 @@ export class HomeComponent implements OnInit {
 
   submitCreateAppForm = (form: Project) =>
     this.homeService.sendForm(form).subscribe(
-      response => alert(response),
+      response => {
+        alert(`App created successfully`);
+        this.modalService.toggleVisibility();
+      },
       error => alert(`Something went wrong: ${error.msg}`),
     );
 
