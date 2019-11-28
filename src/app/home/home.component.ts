@@ -1,6 +1,7 @@
 import { HomeService } from './home.service';
 import { Observable, Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { AditionalContentSection } from '@sharedModels/aditional-content-section';
 import { LearnMoreIcon } from '@sharedModels/learn-more-icon';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
@@ -9,8 +10,8 @@ import { learnMore } from '@mocks/learn-more';
 import { headerMenu } from '@mocks/menu';
 import { sections } from '@mocks/sections';
 import { Icon } from '@sharedModels/icon';
-import { Router } from '@angular/router';
 import { ModalService } from '../shared/components/modal/modal.service';
+import { ViewComponent } from './../shared/components/view/view.component';
 import { Technology } from '@coreModels/technology';
 import { Project } from '@coreModels/project';
 import { CreateAppModalComponent } from '../shared/components/create-app-modal/create-app-modal.component';
@@ -21,14 +22,13 @@ import { CreateAppModalComponent } from '../shared/components/create-app-modal/c
   styleUrls: ['./home.component.scss'],
   providers: [ModalService],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent extends ViewComponent implements OnInit, OnDestroy {
   @ViewChild(CreateAppModalComponent, { static: false }) modalRef: CreateAppModalComponent;
   headerMenu: NavMenuOption[] = headerMenu;
-  activeHeaderMenuOption = 'My Projects';
+  activeHeaderMenuOption = 0;
   sections: AditionalContentSection[] = sections;
   learnMore: LearnMoreIcon[] = learnMore;
   homeIcons: Icon[] = homeIcons;
-  title = 'My Projects';
   appDependencies$: Observable<Project[]> = null;
   technologies$: Observable<Technology[]> = null;
   images$: Observable<string[]> = null;
@@ -36,20 +36,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   subscriptions = new Subscription();
 
   constructor(
-    private router: Router,
+    router: Router,
     private modalService: ModalService,
     private homeService: HomeService,
-  ) {}
+  ) {
+    super(router);
+    this.title = 'My projects';
+  }
 
   ngOnInit() {
     this.technologies$ = this.homeService.getTechnologies();
     this.images$ = this.homeService.getImages();
     this.appDependencies$ = this.homeService.getApplicationDependencies();
     this.navigationTypes = this.homeService.navigationTypes;
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
   }
 
   showCreateModal = () => this.modalService.toggleVisibility();
@@ -65,10 +64,5 @@ export class HomeComponent implements OnInit, OnDestroy {
         error => alert(`Something went wrong: ${error.msg}`),
       ),
     );
-  };
-
-  updateActiveMenuLink = (option: NavMenuOption) => {
-    this.activeHeaderMenuOption = option.label;
-    this.router.navigate([option.link]);
   };
 }
