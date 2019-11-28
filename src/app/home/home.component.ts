@@ -1,6 +1,6 @@
 import { HomeService } from './home.service';
 import { Observable, Subscription } from 'rxjs';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { AditionalContentSection } from '@sharedModels/aditional-content-section';
 import { LearnMoreIcon } from '@sharedModels/learn-more-icon';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 import { ModalService } from '../shared/components/modal/modal.service';
 import { Technology } from '@coreModels/technology';
 import { Project } from '@coreModels/project';
+import { CreateAppModalComponent } from '../shared/components/create-app-modal/create-app-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ import { Project } from '@coreModels/project';
   providers: [ModalService],
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild(CreateAppModalComponent, { static: false }) modalRef: CreateAppModalComponent;
   headerMenu: NavMenuOption[] = headerMenu;
   activeHeaderMenuOption = 'My Projects';
   sections: AditionalContentSection[] = sections;
@@ -58,6 +60,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         response => {
           alert(`App created successfully`);
           this.modalService.toggleVisibility();
+          this.modalRef.resetForm();
         },
         error => alert(`Something went wrong: ${error.msg}`),
       ),
