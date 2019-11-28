@@ -1,12 +1,14 @@
 <nav>
   <ul>
-    <li *ngFor="let menuOption of menu">
-      <a
-        [ngClass]="{ active: menuOption.label === activeOption }"
-        (click)="menuClick($event, menuOption)"
-      >
-        {{ menuOption.label }}
-      </a>
+    <li
+      *ngFor="let menuOption of menu; let i = index"
+      [ngClass]="{ active: i === activeOption }"
+      (click)="menuClick($event, i)"
+    >
+      <ng-container
+        [ngTemplateOutlet]="itemTemplate"
+        [ngTemplateOutletContext]="{ $implicit: menuOption, active: activeOption === i }"
+      ></ng-container>
     </li>
   </ul>
 </nav>

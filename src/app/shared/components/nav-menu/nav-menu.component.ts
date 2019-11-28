@@ -4,7 +4,7 @@ import {
   Input,
   OnInit,
   Output,
-  Renderer2,
+  TemplateRef,
   ViewEncapsulation,
 } from '@angular/core';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
@@ -17,14 +17,15 @@ import { NavMenuOption } from '@sharedModels/nav-menu-option';
 })
 export class NavMenuComponent implements OnInit {
   @Input() menu?: NavMenuOption[] = [];
-  @Input() activeOption = '';
-  @Output() menuLinkClicked = new EventEmitter<NavMenuOption>();
+  @Input() activeOption = 0;
+  @Input() itemTemplate: TemplateRef<HTMLElement>;
+  @Output() menuLinkClicked = new EventEmitter<number>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  menuClick = (event, menuOption: NavMenuOption) => {
+  menuClick = (event, menuOption: number) => {
     event.preventDefault();
     this.menuLinkClicked.emit(menuOption);
   };

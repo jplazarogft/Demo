@@ -2,7 +2,12 @@
   <app-nav-menu
     [menu]="menu"
     [activeOption]="activeOption"
+    [itemTemplate]="menuItem"
     (menuLinkClicked)="updateActiveMenu($event)"
-  ></app-nav-menu>
+  >
+    <ng-template #menuItem let-item="$implicit" let-active="active">
+      <a href="" [ngClass]="{ active: active }">{{ item.label }}</a>
+    </ng-template>
+  </app-nav-menu>
   <app-search-input></app-search-input>
 </section>
