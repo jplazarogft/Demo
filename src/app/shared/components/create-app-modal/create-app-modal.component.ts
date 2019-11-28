@@ -1,4 +1,3 @@
-import { ModalService } from './../modal/modal.service';
 import {
   Component,
   OnInit,
