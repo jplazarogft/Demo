@@ -23,6 +23,16 @@ export class HomeService {
     return this.getDependencies().pipe(
       map(dependencies => {
         return dependencies.filter(
+          dependency => dependency.projectTypeName === ProjectType.Application,
+        );
+      }),
+    );
+  }
+
+  getComponentDependencies(): Observable<Project[]> {
+    return this.getDependencies().pipe(
+      map(dependencies => {
+        return dependencies.filter(
           dependency => dependency.projectTypeName === ProjectType.Component,
         );
       }),

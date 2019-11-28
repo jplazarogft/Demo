@@ -17,7 +17,7 @@
     <app-learn-more [content]="learnMore"></app-learn-more>
   </section>
   <app-create-app-modal
-    [dependencies]="appDependencies$ | async"
+    [dependencies]="componentDependencies$ | async"
     [images]="images$ | async"
     [technologies]="technologies$ | async"
     [navigationTypes]="navigationTypes"

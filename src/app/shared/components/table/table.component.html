@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let dependency of dependencies">
+    <tr *ngFor="let dependency of dependencies | reverse | slice: 0:8">
       <td><svg-icon src="/assets/images/01_icon_comp_android.svg"></svg-icon></td>
       <td>
         <div class="row">

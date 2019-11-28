@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   homeIcons: Icon[] = homeIcons;
   title = 'My Projects';
   appDependencies$: Observable<Project[]> = null;
+  componentDependencies$: Observable<Project[]> = null;
   technologies$: Observable<Technology[]> = null;
   images$: Observable<string[]> = null;
   navigationTypes: string[] = [];
@@ -45,6 +46,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.technologies$ = this.homeService.getTechnologies();
     this.images$ = this.homeService.getImages();
     this.appDependencies$ = this.homeService.getApplicationDependencies();
+    this.componentDependencies$ = this.homeService.getComponentDependencies();
     this.navigationTypes = this.homeService.navigationTypes;
   }
 
@@ -61,6 +63,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           alert(`App created successfully`);
           this.modalService.toggleVisibility();
           this.modalRef.resetForm();
+          this.appDependencies$ = this.homeService.getApplicationDependencies();
         },
         error => alert(`Something went wrong: ${error.msg}`),
       ),

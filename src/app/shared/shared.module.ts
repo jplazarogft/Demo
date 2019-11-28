@@ -22,6 +22,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { SafePipe } from './pipes/safe.pipe';
 
 import { ModalService } from './components/modal/modal.service';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 const components = [
   AccordionComponent,
@@ -55,7 +56,7 @@ const exports = [
 ];
 
 @NgModule({
-  declarations: [...components, SafePipe],
+  declarations: [...components, SafePipe, ReversePipe],
   imports: [CommonModule, HttpClientModule, AngularSvgIconModule, ReactiveFormsModule],
   providers: [ModalService],
   exports,
