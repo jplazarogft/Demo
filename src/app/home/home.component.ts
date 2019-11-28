@@ -1,6 +1,6 @@
 import { HomeService } from './home.service';
-import { Observable } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AditionalContentSection } from '@sharedModels/aditional-content-section';
 import { LearnMoreIcon } from '@sharedModels/learn-more-icon';
 import { NavMenuOption } from '@sharedModels/nav-menu-option';
@@ -20,7 +20,7 @@ import { Project } from '@coreModels/project';
   styleUrls: ['./home.component.scss'],
   providers: [ModalService],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   headerMenu: NavMenuOption[] = headerMenu;
   activeHeaderMenuOption = 'My Projects';
   sections: AditionalContentSection[] = sections;
@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
   technologies$: Observable<Technology[]> = null;
   images$: Observable<string[]> = null;
   navigationTypes: string[] = [];
+  subscriptions = new Subscription();
 
   constructor(
     private router: Router,
@@ -45,16 +46,23 @@ export class HomeComponent implements OnInit {
     this.navigationTypes = this.homeService.navigationTypes;
   }
 
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+  }
+
   showCreateModal = () => this.modalService.toggleVisibility();
 
-  submitCreateAppForm = (form: Project) =>
-    this.homeService.sendForm(form).subscribe(
-      response => {
-        alert(`App created successfully`);
-        this.modalService.toggleVisibility();
-      },
-      error => alert(`Something went wrong: ${error.msg}`),
+  submitCreateAppForm = (form: Project) => {
+    this.subscriptions.add(
+      this.homeService.sendForm(form).subscribe(
+        response => {
+          alert(`App created successfully`);
+          this.modalService.toggleVisibility();
+        },
+        error => alert(`Something went wrong: ${error.msg}`),
+      ),
     );
+  };
 
   updateActiveMenuLink = (option: NavMenuOption) => {
     this.activeHeaderMenuOption = option.label;
