@@ -20,7 +20,7 @@ export class ModalComponent implements OnInit {
     this.isVisible = this.modalService.visible$;
   }
 
-  closeModal = event => {
+  closeModal = (event = null) => {
     if (event && !event.target.classList.contains('modal')) {
       return;
     }
