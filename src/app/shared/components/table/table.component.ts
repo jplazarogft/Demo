@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -11,14 +11,4 @@ export class TableComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-  ngOnChanges(changes: SimpleChanges): void {
-    const { dependencies } = changes;
-    if (dependencies.currentValue !== null && dependencies.currentValue.length > 0) {
-      console.log(
-        '===',
-        dependencies.currentValue.filter(x => x.projectTypeId === 2),
-      );
-    }
-  }
 }

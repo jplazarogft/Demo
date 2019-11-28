@@ -11,16 +11,16 @@
       [title]="title"
       (createAppClick)="showCreateModal()"
     ></app-home-header>
-    <app-home-filters></app-home-filters>
+    <!--app-home-filters></app-home-filters-->
     <app-accordion><app-table [dependencies]="appDependencies$ | async"></app-table></app-accordion>
     <app-aditional-content [sections]="sections"></app-aditional-content>
     <app-learn-more [content]="learnMore"></app-learn-more>
   </section>
-  <!--app-create-app-modal
+  <app-create-app-modal
     [dependencies]="appDependencies$ | async"
     [images]="images$ | async"
     [technologies]="technologies$ | async"
     [navigationTypes]="navigationTypes"
     (submitClick)="submitCreateAppForm($event)"
-  ></app-create-app-modal-->
+  ></app-create-app-modal>
 </section>

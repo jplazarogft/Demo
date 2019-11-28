@@ -22,7 +22,6 @@ export class HomeService {
   getApplicationDependencies(): Observable<Project[]> {
     return this.getDependencies().pipe(
       map(dependencies => {
-        console.log(dependencies);
         return dependencies.filter(
           dependency => dependency.projectTypeName === ProjectType.Component,
         );
