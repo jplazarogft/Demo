@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 // Components
 import { ActionMenuComponent } from './components/action-menu/action-menu.component';
@@ -15,8 +17,7 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { PageMenuComponent } from './components/page-menu/page-menu.component';
 import { SearchInputComponent } from './components/search-input/search-input.component';
 import { TableComponent } from './components/table/table.component';
-import { HttpClientModule } from '@angular/common/http';
-import { AngularSvgIconModule } from 'angular-svg-icon';
+import { ViewComponent } from './components/view/view.component';
 
 // Pipes
 import { SafePipe } from './pipes/safe.pipe';
@@ -55,7 +56,7 @@ const exports = [
 ];
 
 @NgModule({
-  declarations: [...components, SafePipe],
+  declarations: [...components, SafePipe, ViewComponent],
   imports: [CommonModule, HttpClientModule, AngularSvgIconModule, ReactiveFormsModule],
   providers: [ModalService],
   exports,
