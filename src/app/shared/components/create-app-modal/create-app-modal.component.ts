@@ -44,7 +44,7 @@ export class CreateAppModalComponent implements OnInit, OnChanges {
 
   /**
    * add form controls dinamically when receiving input values
-   * @param changes
+   * changes
    */
   ngOnChanges(changes: SimpleChanges): void {
     const { dependencies } = changes;
